@@ -39,13 +39,13 @@ Route::resources([
 ]);
 
 // Route::get('admin/products/store', 'ProductController@store');
-Route::get('admin/products/create', 'ProductController@create');
-Route::put('admin/products/store', 'ProductController@store');
-Route::get('admin/products/index/{id}', 'ProductController@idIndex');
+Route::get('admin/products/create', 'ProductController@create')->name('products.create');
+Route::put('admin/products/store', 'ProductController@store')->name('products.store');
+Route::get('admin/products/index/{id}', 'ProductController@idIndex')->name('products.index.id');
 // Route::get('admin/products/index', 'ProductController@index');
 // Route::get('admin/products/show/{id?}', 'ProductController@show');
 // Route::put('admin/products/update/{id}', 'ProductController@update');
 // Route::get('products/active/{id}/{act}', 'ProductController@active');
 // Route::get('products/showstatus/{act}', 'ProductController@showStatus');
-Route::get('admin/products/{id}/edit', 'ProductController@update');
+Route::get('admin/products/{id}/edit', 'ProductController@update')->name('products.id.edit');
 // Route::put('admin/exel/store', 'ExelController@store');

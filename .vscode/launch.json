@@ -14,7 +14,7 @@
             "name": "Listen for XD",
             "type": "php",
             "request": "launch",
-            "port": 8000,
+            "port": 9001,
             "pathMappings": {
                 "users/alvydas/catalog/laravel/catalog": "c:/",
             }    

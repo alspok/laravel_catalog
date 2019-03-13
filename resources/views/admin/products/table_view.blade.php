@@ -9,16 +9,16 @@
 			<table>
 				<thead>
 					<tr class='d-flex'>
-						<th class='col-1'>Produktas</th>
+						<th class='col-2'>Produktas</th>
 						<th class='col-1'>Slug</th>
 						<th class='col-1'>Svoris</th>
 						<th class='col-1'>Kaina</th>
-						<th class='col-1'>Spec. kaina</th>
+						<th class='col-2'>Spec. kaina</th>
 						<th class='col-1'>Aktyvumas</th>
 						<th class='col-1'>Vienetas</th>
-						<th class='col-1'>Pastabos</th>
+						<th class='col-2'>Pastabos</th>
 						<th class='col-1'>Kategorija</th>
-						<th class='col-1'>Paveikslas</th>
+						<th class='col-2'>Paveikslas</th>
 					</tr>
 				@foreach($data as $item)
 					@if($item['active'] == 1) <tr class='d-flex'>
