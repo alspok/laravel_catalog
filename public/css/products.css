@@ -1,0 +1,18 @@
+table{
+		table-layout: fixed;
+  		width: 100%;
+	}
+tr.strike{
+		text-decoration: line-through;
+	}
+th{
+		font-weight: bold;
+		background: lightgrey;
+	}
+textarea{
+		height: 104px;
+		width: 400px;
+}
+tfoot{
+	background: lightgray;
+}
