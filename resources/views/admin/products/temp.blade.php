@@ -15,12 +15,12 @@
 					<thead>
 						<th><input type="checkbox" id="checkall" /></th>
 						<th>Name</th>
-						<th>Slug</th>
+						<th>Weight</th>
+						<th>Unit</th>
+						<!-- <th>Slug</th> -->
 						<th>Price</th>
 						<th>Spec. price</th>
-						<th>Weight</th>
-						<th>Active/th>
-						<th>Unit</th>
+						<th>Active</th>
 						<th>Description</th>
 						<th>Shop</th>
 						<th>Img</th>
@@ -31,12 +31,12 @@
 						<tr>
 							<td><input type="checkbox" class="checkthis" /></td>
 							<td>{{$data['name']}}</td>
-							<td>{{$data['slug']}}</td>
+							<td>{{$data['weight']}}</td>
+							<td>{{$data['unit']}}</td>
+							<!-- <td>{{$data['slug']}}</td> -->
 							<td>{{$data['price']}}</td>
 							<td>{{$data['special_price']}}</td>
-							<td>{{$data['weight']}}</td>
 							<td>{{$data['active']}}</td>
-							<td>{{$data['unit']}}</td>
 							<td>{{$data['description']}}</td>
 							<td>{{$data['shop_id']}}</td>
 							<td>{{$data['img']}}</td>
