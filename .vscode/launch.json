@@ -10,15 +10,15 @@
             "request": "launch",
             "port": 8081
         },
-        // {
-        //     "name": "Listen for XD",
-        //     "type": "php",
-        //     "request": "launch",
-        //     "port": 9001,
-        //     "pathMappings": {
-        //         "users/alvydas/laravel_catalog": "c:/",
-        //     }    
-        // },
+        {
+            "name": "Listen for XD",
+            "type": "php",
+            "request": "launch",
+            "port": 9000,
+            "pathMappings": {
+                "users/alvydas/laravel_catalog": "c:/",
+            }    
+        },
         {
             "name": "Listen for XDebug",
             "type": "php",

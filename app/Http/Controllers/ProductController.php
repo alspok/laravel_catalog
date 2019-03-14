@@ -29,10 +29,10 @@ class ProductController extends Controller
      */
     public function idIndex($id)
     {
-        $data = Product::find($id);
+        $data = Product::find($id)->toArray();
         // var_dump($data);
         // return;
-        return view('admin.products.item_view', compact('data'));
+        return view('admin.products.temp', compact('data'));
     }
 
     /**
