@@ -15,11 +15,11 @@ class ProductController extends Controller
     public function index()
     {
         // $data['data'] = Product::all();
-        $data['data'] = Product::all();
+        $data = Product::all()->toArray();
         // echo '<pre>';
         // print_r($data);
         // return;
-        return view('admin.products.table_view', $data);
+        return view('admin.products.table_view', compact('data'));
     }
 
     /**
