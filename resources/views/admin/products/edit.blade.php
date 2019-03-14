@@ -8,7 +8,7 @@
 <div class="container">
 	<div class="row">
         <div class="col-md-12">
-        	<h3>Maistas</h3>
+        	<h4>Maistas - Edit</h4>
 			<div class="table-responsive">
 				<table id="mytable" class="table table-bordred table-striped">
 					<thead>
