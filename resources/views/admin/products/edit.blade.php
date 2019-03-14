@@ -27,19 +27,17 @@
 						<th>Delete</th>
 					</thead>
 					<tbody>
+							@if($data['active'] == 1) <tr class='d-flex'>
+								@else <tr class='d-flex strike'>
+							@endif
+							<td><input type="checkbox" class="checkthis" /></td>
 							@foreach($data as $key => $value)
-							{{$value}}
-								@if($data['active'] == 1) <tr class='d-flex'>
-									@else <tr class='d-flex strike'>
-								@endif
-								<td><input type="checkbox" class="checkthis" /></td>
 									@if($key == 'id' || $key == 'slug' || $key == 'created_at' || $key == 'updated_at') @continue
-										@else <td>{{$value}}</td>
+										@else  <td>{{$value}}</td>
 									@endif
-								<td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></td>
-								<td><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>
-								</tr>
 							@endforeach
+							<td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></td>
+							<td><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>
 					</tbody>
 				</table>
 			</div>
