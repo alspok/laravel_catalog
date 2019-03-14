@@ -14,11 +14,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        // $data['data'] = Product::all();
         $data = Product::all()->toArray();
-        // echo '<pre>';
-        // print_r($data);
-        // return;
         return view('admin.products.table_view', compact('data'));
     }
 
@@ -30,8 +26,6 @@ class ProductController extends Controller
     public function idIndex($id)
     {
         $data = Product::find($id)->toArray();
-        // var_dump($data);
-        // return;
         return view('admin.products.temp', compact('data'));
     }
 
@@ -104,7 +98,9 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        $data = Product::findOrFail($id);
+        $data = Product::find($id)->toArray();
+        // var_dump($data);
+        // return;
         return view('admin.products.edit', compact('data'));
     }
 

@@ -47,5 +47,5 @@ Route::get('admin/products/index/{id}', 'ProductController@idIndex')->name('prod
 // Route::put('admin/products/update/{id}', 'ProductController@update');
 // Route::get('products/active/{id}/{act}', 'ProductController@active');
 // Route::get('products/showstatus/{act}', 'ProductController@showStatus');
-Route::get('admin/products/{id}/edit', 'ProductController@update')->name('products.id.edit');
+Route::get('admin/products/edit/{id}', 'ProductController@edit')->name('products.edit');
 // Route::put('admin/exel/store', 'ExelController@store');

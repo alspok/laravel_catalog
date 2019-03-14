@@ -1,40 +1,48 @@
-@extends('layouts.app')
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="{{ asset('css/products.css') }}" >
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
 
-@section('content')
-<form class='container' action="{{ route('products.update', $data->id) }}" method='post'>
-	@method('POST')
-	@csrf
-    <div class="row justify-content-center">
-		<div class="col-md-4">
-			<label class='col-form-label'>ID:</label>
-      		<input type='text' name='id' class='form-control' value = '{{$data->id}}' />
-      		<label class='col-form-label'>Name (str):</label>
-      		<input type='text' name='name' class='form-control' value = '{{$data->name}}' />
-      		<label class='col-form-label'>Slug (str):</label>
-      		<input type='text' name='slug' class='form-control' value = '{{$data->slug}}' />
-      		<label class='col-form-label'>Weight (float):</label>
-      		<input type='text' name='weight' class='form-control' value = '{{$data->weight}}' />
-      		<label class='col-form-label'>Price (float):</label>
-      		<input type='text' name='price' class='form-control' value = '{{$data->price}}' />
-      		<label class='col-form-label'>Special price (float):</label>
-      		<input type='text' name='special_price' class='form-control' value = '{{$data->special_price}}' />
-      	</div>
-      	<div class="col-md-4">
-      		<label class='col-form-label'>Unit (str)</label>
-      		<input type='text' name='unit' class='form-control' value = '{{$data->unit}}' />
-      		<label class='col-form-label'>Description (text): (str)</label>
-      		<input type='text' name='description' class='form-control' value = '{{$data->description}}' />
-      		<label class='col-form-label'>Activity (boolean):</label>
-      		<input type='text' name='active' class='form-control' value = '{{$data->active}}' />
-      		<label class='col-form-label'>Category (int):</label>
-      		<input type='text' name='category' class='form-control' value = '{{$data->category}}' />
-      		<label class='col-form-label'>Shop id (int):</label>
-      		<input type='text' name='shop_id' class='form-control' value = '{{$data->shop_id}}' />
-      		<label class='col-form-label'>Image (string):</label>
-      		<input type='text' name='img' class='form-control' value = '{{$data->img}}' />
-      		<br><br>
-      		<button type='submit' class='btn btn-dark' width='20' height='10'>Save</button>
-      	</div>
+<div class="container">
+	<div class="row">
+        <div class="col-md-12">
+        	<h3>Maistas</h3>
+			<div class="table-responsive">
+				<table id="mytable" class="table table-bordred table-striped">
+					<thead>
+						<th><input type="checkbox" id="checkall" /></th>
+						<th>Name</th>
+						<th>Weight</th>
+						<th>Unit</th>
+						<th>Price</th>
+						<th>Spec price</th>
+						<th>Active</th>
+						<th style='width: 200px'>Description</th>
+						<th>Cat</th>
+						<th>Shop</th>
+						<th style='width: 200px'>Img</th>
+						<th>Edit</th>
+						<th>Delete</th>
+					</thead>
+					<tbody>
+							@foreach($data as $key => $value)
+							{{$value}}
+								@if($data['active'] == 1) <tr class='d-flex'>
+									@else <tr class='d-flex strike'>
+								@endif
+								<td><input type="checkbox" class="checkthis" /></td>
+									@if($key == 'id' || $key == 'slug' || $key == 'created_at' || $key == 'updated_at') @continue
+										@else <td>{{$value}}</td>
+									@endif
+								<td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></td>
+								<td><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>
+								</tr>
+							@endforeach
+					</tbody>
+				</table>
+			</div>
+		</div>
 	</div>
-</form>
-@endsection
+</div>
