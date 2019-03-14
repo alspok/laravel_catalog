@@ -18,10 +18,10 @@ class CreateProductsTable extends Migration
             $table->string('name');
             $table->string('slug')->nullable();
             $table->float('weight');
+            $table->string('unit');
             $table->float('price');
             $table->float('special_price')->nullable();
             $table->tinyInteger('active');
-            $table->string('unit');
             $table->text('description')->nullable();
             $table->integer('category');
             $table->integer('shop_id')->nullable();
