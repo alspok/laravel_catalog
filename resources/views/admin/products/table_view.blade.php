@@ -8,21 +8,25 @@
 <div class="container">
 	<div class="row">
         <div class="col-md-12">
-        	<h3>Maistas</h3>
+        	<h3>Maistas - Index</h3>
 			<div class="table-responsive">
 				<table id="mytable" class="table table-bordred table-striped">
 					<thead>
 						<th><input type="checkbox" id="checkall" /></th>
-						<th>Name</th>
+						<th style='width: 220px'>Name</th>
 						<th>Weight</th>
 						<th>Unit</th>
 						<th>Price</th>
 						<th>Spec price</th>
 						<th>Active</th>
-						<th style='width: 200px'>Description</th>
+						<th style='width: 180px'>Description</th>
 						<th>Cat</th>
 						<th>Shop</th>
+<<<<<<< HEAD
 						<th>Img</th>
+=======
+						<th style='width: 180px'>Img</th>
+>>>>>>> 62a14cb5656ea7928ef1b2e205f1c75b40e94d8e
 						<th>Edit</th>
 						<th>Delete</th>
 					</thead>
