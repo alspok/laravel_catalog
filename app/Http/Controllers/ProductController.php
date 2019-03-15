@@ -135,8 +135,10 @@ class ProductController extends Controller
     public function update(Request $request, $id)
     // public function update($id)
     {   
+        $name = request()->post();
+        var_dump($name);
+        return;
         $data = Product::find($id)->toArray();
-        dd($data);
         $data->description= $request->get('description');
         $data->save();
         return redirect()->route('products.index');
