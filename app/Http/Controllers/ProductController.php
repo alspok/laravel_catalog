@@ -26,7 +26,8 @@ class ProductController extends Controller
     public function idIndex($id)
     {
         $data = Product::find($id)->toArray();
-        return view('admin.products.temp', compact('data'));
+        // return view('admin.products.temp', compact('data'));
+        return view('admin.products.edit', compact('data'));
     }
 
     /**
@@ -134,7 +135,6 @@ class ProductController extends Controller
     public function update(Request $request, $id)
     {   
         $data = Product::findOrFail($id);
-        dd($data);
         $data->description= $request->get('description');
         $data->save();
         return redirect()->route('products.index');

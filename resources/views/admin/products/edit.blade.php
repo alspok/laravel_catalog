@@ -17,7 +17,7 @@
 						<th>Weight</th>
 						<th>Unit</th>
 						<th>Price</th>
-						<th>Spec price</th>
+						<th style='width: 100px'>Spec price</th>
 						<th>Active</th>
 						<th style='width: 200px'>Description</th>
 						<th>Cat</th>
