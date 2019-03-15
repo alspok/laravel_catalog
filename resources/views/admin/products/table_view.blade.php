@@ -22,7 +22,7 @@
 						<th style='width: 200px'>Description</th>
 						<th>Cat</th>
 						<th>Shop</th>
-						<th style='width: 200px'>Img</th>
+						<th>Img</th>
 						<th>Edit</th>
 						<th>Delete</th>
 					</thead>
@@ -33,9 +33,13 @@
 								@endif
 								<td><input type="checkbox" class="checkthis" /></td>
 								@foreach($item as $key => $value)
-									@if($key == 'id' || $key == 'slug' || $key == 'created_at' || $key == 'updated_at') @continue
+									@if($key == 'img')
+										<td><a href="http:/img/bread.jpg">Image</a></td>
+									@endif
+									@if($key == 'id' || $key == 'slug' || $key == 'created_at' || $key == 'updated_at' || $key == 'img') @continue
 										@else  <td>{{$value}}</td>
 									@endif
+
 								@endforeach
 								<td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></td>
 								<td><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>

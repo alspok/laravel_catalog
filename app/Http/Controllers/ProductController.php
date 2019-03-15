@@ -86,7 +86,7 @@ class ProductController extends Controller
      */
     public function showStatus(bool $act)
     {
-        $data[] = Product::all()->toArray();
+        $data = Product::all()->toArray();
         return view('admin.products.showstatus', compact('data', 'act'));
     }
 
@@ -132,8 +132,9 @@ class ProductController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
+    // public function update($id)
     {   
-        $data = Product::findOrFail($id);
+        $data = Product::find($id)->toArray();
         dd($data);
         $data->description= $request->get('description');
         $data->save();
@@ -148,6 +149,7 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
+        echo 'in destroy';
         //
     }
 }

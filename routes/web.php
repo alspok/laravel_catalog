@@ -28,7 +28,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resources([
-	'admin/products' => 'ProductController',
+	// 'admin/products' => 'ProductController',
 	'admin/categories' => 'CategoriesController',
 	'admin/posts' => 'PostsController',
 	'admin/relations' => 'RelationsController',
@@ -40,12 +40,13 @@ Route::resources([
 
 // Route::get('admin/products/store', 'ProductController@store');
 Route::get('admin/products/create', 'ProductController@create')->name('products.create');
-Route::put('admin/products/store', 'ProductController@store');
+Route::put('admin/products/store', 'ProductController@store')->name('products.store');
 Route::get('admin/products/index/{id}', 'ProductController@idIndex')->name('products.index.id');
 // Route::get('admin/products/index', 'ProductController@index');
 // Route::get('admin/products/show/{id?}', 'ProductController@show');
-// Route::put('admin/products/update/{id}', 'ProductController@update');
+// Route::get('admin/products/update/{id}', 'ProductController@update')->name('products.update');
+// Route::put('admin/products/update', 'ProductController@update')->name('products.update');
 // Route::get('products/active/{id}/{act}', 'ProductController@active');
 // Route::get('products/showstatus/{act}', 'ProductController@showStatus');
 Route::get('admin/products/edit/{id}', 'ProductController@edit')->name('products.edit');
-// Route::put('admin/exel/store', 'ExelController@store');
+Route::get('admin/products/update/{id}', 'ProductController@update')->name('products.update');
