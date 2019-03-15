@@ -27,7 +27,6 @@
 						<th>Delete</th>
 					</thead>
 					<tbody>
-<<<<<<< HEAD
 					<form class='' action="{{route('products.update', $data['id'])}}"  method='get'>
 						{{ csrf_field() }}
 						{{$data['id']}} - {{$data['name']}}
@@ -42,21 +41,6 @@
 						@endforeach
 						<td><p data-placement="top" data-toggle="tooltip" title="Edit"><button type='submit' class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></td>
 						<td><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>
-=======
-					<form class='' action="{{route('products.update', $data['id'])}}"  method='post'>
-							@if($data['active'] == 1) <tr class='d-flex'>
-								@else <tr class='d-flex strike'>
-							@endif
-							<td><input type="checkbox" class="checkthis" /></td>
-							@foreach($data as $key => $value)
-									@if($key == 'id' || $key == 'slug' || $key == 'created_at' || $key == 'updated_at') @continue
-										@else  <td><input type='text' name='some'style='border-style: hidden' value='{{$value}}' /></td>
-									@endif
-									<!-- <td><a href="/img/mild.jpg">Image</a></td> -->
-							@endforeach
-							<td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></td>
-							<td><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>
->>>>>>> 62a14cb5656ea7928ef1b2e205f1c75b40e94d8e
 					</form>
 					</tbody>
 				</table>
