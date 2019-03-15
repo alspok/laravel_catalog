@@ -49,4 +49,4 @@ Route::get('admin/products/index/{id}', 'ProductController@idIndex')->name('prod
 // Route::get('products/active/{id}/{act}', 'ProductController@active');
 // Route::get('products/showstatus/{act}', 'ProductController@showStatus');
 Route::get('admin/products/edit/{id}', 'ProductController@edit')->name('products.edit');
-Route::get('admin/products/update/{id}', 'ProductController@update')->name('products.update');
+Route::post('admin/products/update/{id}', 'ProductController@update')->name('products.update');

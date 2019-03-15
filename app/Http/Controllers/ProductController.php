@@ -135,12 +135,8 @@ class ProductController extends Controller
     public function update(Request $request, $id)
     // public function update($id)
     {   
-<<<<<<< HEAD
         $data = Product::find($id)->toArray();
         dd($data);
-=======
-        $data = Product::findOrFail($id);
->>>>>>> 62a14cb5656ea7928ef1b2e205f1c75b40e94d8e
         $data->description= $request->get('description');
         $data->save();
         return redirect()->route('products.index');

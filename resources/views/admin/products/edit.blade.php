@@ -27,7 +27,7 @@
 						<th>Delete</th>
 					</thead>
 					<tbody>
-					<form class='' action="{{route('products.update', $data['id'])}}"  method='get'>
+					<form class='' action="{{route('products.update', $data['id'])}}"  method='post'>
 						{{ csrf_field() }}
 						{{$data['id']}} - {{$data['name']}}
 						@if($data['active'] == 1) <tr class='d-flex'>
