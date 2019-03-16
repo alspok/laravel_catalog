@@ -135,13 +135,19 @@ class ProductController extends Controller
     public function update(Request $request, $id)
     // public function update($id)
     {   
-        $name = request()->post();
-        var_dump($name);
-        return;
-        $data = Product::find($id)->toArray();
-        $data->description= $request->get('description');
-        $data->save();
-        return redirect()->route('products.index');
+        $request->validate([
+            'name' => 'required',
+            'weight' => 'required|float',
+            'unit' => 'required',
+            'price' => 'required|float',
+            'active' => 'required',
+            'category' => 'requierd',
+            'share_qty' => 'required|integer'
+          ]);
+
+          $product = Product::find($id);
+          $product->update($request->all());
+          return redirect()->route('products.index')->with('success','Product updated successfully');
     }
 
     /**

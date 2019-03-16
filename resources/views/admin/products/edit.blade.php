@@ -36,7 +36,7 @@
 						<td><input type="checkbox" class="checkthis" /></td>
 						@foreach($data as $key => $value)
 								@if($key == 'id' || $key == 'slug' || $key == 'created_at' || $key == 'updated_at') @continue
-									@else  <td><input type='text' name='some'style='border-style: hidden' value='{{$value}}' /></td>
+									@else  <td><input type='text' name='{{$key}}'style='border-style: hidden' value='{{$value}}' /></td>
 								@endif
 						@endforeach
 						<td><p data-placement="top" data-toggle="tooltip" title="Edit"><button type='submit' class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></td>
