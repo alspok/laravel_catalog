@@ -166,11 +166,12 @@ class ProductController extends Controller
      public function softDelete(Request $request, $id)
      {
          $task = Product::find($id);
+
          var_dump($task);
-        //  return;
+         return;
          $product = $request->all();
-        var_dump($product);
-        return;
+        // var_dump($product);
+        // return;
          if($product['active']) $product['active'] = 0;
             else $product['active'] = 1;
         $product->fill($product)->save();

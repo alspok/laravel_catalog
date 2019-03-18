@@ -29,7 +29,7 @@
 					<tbody>
 						@foreach($products as $item)
 							<form class='' action="{{ route('products.update', $item->id) }}" method='post'>
-							{{@cfrs_field}}
+							@csrf
 								@if($item->active == 1) <tr class='d-flex'>
 								@else <tr class='d-flex strike'>
 								@endif
@@ -47,7 +47,7 @@
 									<td><p data-placement="top" data-toggle="tooltip" title="Edit"><button type='submit' class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
 							</form>
 							<form class='' action="{{ route('products.softdelete', $item->id)}}" method='post'>
-							{{@cfrs_field}}
+							@csrf
 								<td><p data-placement="top" data-toggle="tooltip" title="Delete"><button type='submit' class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>
 							</form>
 							</tr>
