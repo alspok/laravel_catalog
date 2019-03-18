@@ -52,10 +52,10 @@ class ProductController extends Controller
         $product->name = $request->name;
         $product->slug = $request->slug;
         $product->weight = $request->weight;
+        $product->unit = $request->unit;
         $product->price = $request->price;
         $product->special_price = $request->special_price;
         $product->active = $request->active;
-        $product->unit = $request->unit;
         $product->description = $request->description;
         $product->category = $request->category;
         $product->shop_id = $request->shop_id;

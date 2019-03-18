@@ -13,18 +13,18 @@
 				<table id="mytable" class="table table-bordred table-striped">
 					<thead>
 						<th><input type="checkbox" id="checkall" /></th>
-						<th style='width: 150px'>Name</th>
-						<th>Weight</th>
-						<th>Unit</th>
-						<th>Price</th>
-						<th>Spec price</th>
+						<th style='width: 200px'>Produktas</th>
+						<th>Svoris</th>
+						<th>Vnt</th>
+						<th>Kaina</th>
+						<th>Spc kaina</th>
 						<th>Active</th>
-						<th style='width: 220px'>Description</th>
-						<th>Cat</th>
-						<th>Shop</th>
-						<th style='width: 150px'>Img</th>
-						<th>Edit</th>
-						<th>Delete</th>
+						<th style='width: 220px'>Pastabos</th>
+						<th>Kat</th>
+						<th>Pard</th>
+						<th >Vaizdas</th>
+						<th>Keisti</th>
+						<th>Trinti</th>
 					</thead>
 					<tbody>
 						@foreach($products as $item)
@@ -43,7 +43,7 @@
 									<td>{{$item->description}}</td>
 									<td>{{$item->category}}</td>
 									<td>{{$item->shop_id}}</td>
-									<td>{{$item->img}}</td>
+									<td><a href='{{$item->img}}'>Img</a></td>
 									<td><p data-placement="top" data-toggle="tooltip" title="Edit"><button type='submit' class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
 							</form>
 							<form class='' action="{{ route('products.softdelete', $item->id)}}" method='post'>
