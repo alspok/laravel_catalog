@@ -8,7 +8,10 @@
             "name": "Listen XD for Laravel",
             "type": "php",
             "request": "launch",
-            "port": 9001
+            "port": 9001,
+            "pathMappings": {
+                "users/alvydas/laravel_catalog": "c:/"
+            }
         },
         {
             "name": "Listen for XD",

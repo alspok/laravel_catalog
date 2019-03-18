@@ -134,7 +134,7 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {   
-        // $request->validate([
+        // $validation = $request->validate([
         //     'name' => 'required',
         //     'weight' => 'required',
         //     'unit' => 'required',
@@ -142,13 +142,13 @@ class ProductController extends Controller
         //     'active' => 'required',
         //     'category' => 'required',
         //     'share_qty' => 'required'
-        //   ]);
+        // ]);
+        
+        // var_dump($validation);
+        // return;
 
-        // $product = Product::find($id);
         $task = Product::find($id);
         $product = $request->all();
-        // var_dump($product);
-        // return;
         $task->fill($product)->save();
         
         return redirect()->route('products.index')->with('success','Product updated successfully');
