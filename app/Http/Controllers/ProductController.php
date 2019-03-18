@@ -163,18 +163,12 @@ class ProductController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-     public function softDelete(Request $request, $id)
+     public function softDelete($id)
      {
-         $task = Product::find($id);
-
-         var_dump($task);
-         return;
-         $product = $request->all();
-        // var_dump($product);
-        // return;
-         if($product['active']) $product['active'] = 0;
-            else $product['active'] = 1;
-        $product->fill($product)->save();
+        $product = Product::find($id);
+        if($product->active == 1) $product->active = 0;
+           else $product->active = 1;
+        $product->save();
         
         return redirect()->route('products.index')->with('success','Product updated successfully');
      }
