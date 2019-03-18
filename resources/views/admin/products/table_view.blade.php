@@ -13,37 +13,43 @@
 				<table id="mytable" class="table table-bordred table-striped">
 					<thead>
 						<th><input type="checkbox" id="checkall" /></th>
-						<th style='width: 220px'>Name</th>
+						<th style='width: 150px'>Name</th>
 						<th>Weight</th>
 						<th>Unit</th>
 						<th>Price</th>
 						<th>Spec price</th>
 						<th>Active</th>
-						<th style='width: 180px'>Description</th>
+						<th style='width: 220px'>Description</th>
 						<th>Cat</th>
 						<th>Shop</th>
-						<th>Img</th>
+						<th style='width: 150px'>Img</th>
 						<th>Edit</th>
 						<th>Delete</th>
 					</thead>
 					<tbody>
-						@foreach($data as $item)
-							@if($item['active'] == 1) <tr class='d-flex'>
-							@else <tr class='d-flex strike'>
-							@endif
-							<td><input type="checkbox" class="checkthis" /></td>
-							@foreach($item as $key => $value)
-								@if($key == 'img')
-									<td><a href="http:/img/bread.jpg">Image</a></td>
+						@foreach($products as $item)
+							<form class='' action="{{ route('products.update', $item->id) }}" method='post'>
+							{{@cfrs_field}}
+								@if($item->active == 1) <tr class='d-flex'>
+								@else <tr class='d-flex strike'>
 								@endif
-								@if($key == 'id' || $key == 'slug' || $key == 'created_at' || $key == 'updated_at' || $key == 'img') @continue
-									@else  <td>{{$value}}</td>
-								@endif
-
-							@endforeach
-							<td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit"><span class="glyphicon glyphicon-pencil"><a href="{{ route('products.edit', ['id' => 3]) }}">----</a></span></button></p></td>
-							<!-- <a href="{{ redirect()->route('products.edit', ['id' => 1]) }}"></a> -->
-							<td><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>
+									<td><input type="checkbox" class="checkthis" /></td>
+									<td>{{$item->name}}</td>
+									<td>{{$item->weight}}</td>
+									<td>{{$item->unit}}</td>
+									<td>{{$item->price}}</td>
+									<td>{{$item->special_price}}</td>
+									<td>{{$item->active}}</td>
+									<td>{{$item->description}}</td>
+									<td>{{$item->category}}</td>
+									<td>{{$item->shop_id}}</td>
+									<td>{{$item->img}}</td>
+									<td><p data-placement="top" data-toggle="tooltip" title="Edit"><button type='submit' class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
+							</form>
+							<form class='' action="{{ route('products.softdelete', $item->id)}}" method='post'>
+							{{@cfrs_field}}
+								<td><p data-placement="top" data-toggle="tooltip" title="Delete"><button type='submit' class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>
+							</form>
 							</tr>
 						@endforeach
 					</tbody>

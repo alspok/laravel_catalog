@@ -14,8 +14,8 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $data = Product::all()->toArray();
-        return view('admin.products.table_view', compact('data'));
+        $data['products'] = Product::all();
+        return view('admin.products.table_view', $data);
     }
 
     /**
@@ -149,10 +149,35 @@ class ProductController extends Controller
 
         $task = Product::find($id);
         $product = $request->all();
+
         $task->fill($product)->save();
         
         return redirect()->route('products.index')->with('success','Product updated successfully');
     }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+
+     public function softDelete(Request $request, $id)
+     {
+         $task = Product::find($id);
+         var_dump($task);
+        //  return;
+         $product = $request->all();
+        var_dump($product);
+        return;
+         if($product['active']) $product['active'] = 0;
+            else $product['active'] = 1;
+        $product->fill($product)->save();
+        
+        return redirect()->route('products.index')->with('success','Product updated successfully');
+     }
+
 
     /**
      * Soft delete specified resource from storage.
@@ -161,7 +186,7 @@ class ProductController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-     public function delete($id, $active)
+     public function delete($id)
      {
          echo 'in soft delete';
      }
