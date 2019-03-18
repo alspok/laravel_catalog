@@ -42,6 +42,7 @@ Route::resources([
 Route::get('admin/products/create', 'ProductController@create')->name('products.create');
 Route::put('admin/products/store', 'ProductController@store')->name('products.store');
 Route::get('admin/products/index/{id}', 'ProductController@idIndex')->name('products.index.id');
+Route::get('admin/products/index', 'ProductController@index')->name('products.index');
 // Route::get('admin/products/index', 'ProductController@index');
 // Route::get('admin/products/show/{id?}', 'ProductController@show');
 // Route::get('admin/products/update/{id}', 'ProductController@update')->name('products.update');

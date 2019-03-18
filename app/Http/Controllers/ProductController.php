@@ -133,21 +133,25 @@ class ProductController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
-    // public function update($id)
     {   
-        $request->validate([
-            'name' => 'required',
-            'weight' => 'required|float',
-            'unit' => 'required',
-            'price' => 'required|float',
-            'active' => 'required',
-            'category' => 'requierd',
-            'share_qty' => 'required|integer'
-          ]);
+        // $request->validate([
+        //     'name' => 'required',
+        //     'weight' => 'required',
+        //     'unit' => 'required',
+        //     'price' => 'required',
+        //     'active' => 'required',
+        //     'category' => 'required',
+        //     'share_qty' => 'required'
+        //   ]);
 
-          $product = Product::find($id);
-          $product->update($request->all());
-          return redirect()->route('products.index')->with('success','Product updated successfully');
+        // $product = Product::find($id);
+        $task = Product::find($id);
+        $product = $request->all();
+        // var_dump($product);
+        // return;
+        $task->fill($product)->save();
+        
+        return redirect()->route('products.index')->with('success','Product updated successfully');
     }
 
     /**

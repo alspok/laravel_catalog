@@ -22,11 +22,7 @@
 						<th style='width: 180px'>Description</th>
 						<th>Cat</th>
 						<th>Shop</th>
-<<<<<<< HEAD
 						<th>Img</th>
-=======
-						<th style='width: 180px'>Img</th>
->>>>>>> 62a14cb5656ea7928ef1b2e205f1c75b40e94d8e
 						<th>Edit</th>
 						<th>Delete</th>
 					</thead>
