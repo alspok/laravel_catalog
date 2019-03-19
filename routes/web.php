@@ -49,6 +49,6 @@ Route::get('admin/products/index', 'ProductController@index')->name('products.in
 // Route::put('admin/products/update', 'ProductController@update')->name('products.update');
 // Route::get('products/active/{id}/{act}', 'ProductController@active');
 // Route::get('products/showstatus/{act}', 'ProductController@showStatus');
-Route::get('admin/products/edit/{id}', 'ProductController@edit')->name('products.edit');
+Route::post('admin/products/edit/{id}', 'ProductController@edit')->name('products.edit');
 Route::post('admin/products/update/{id}', 'ProductController@update')->name('products.update');
 Route::post('admin/products/softdelete/{id}', 'ProductController@softDelete')->name('products.softdelete');

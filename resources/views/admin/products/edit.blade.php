@@ -12,19 +12,16 @@
 			<div class="table-responsive">
 				<table id="mytable" class="table table-bordred table-striped">
 					<thead>
-						<th><input type="checkbox" id="checkall" /></th>
-						<th>Name</th>
-						<th>Weight</th>
-						<th>Unit</th>
-						<th>Price</th>
-						<th style='width: 100px'>Spec price</th>
-						<th>Active</th>
-						<th style='width: 200px'>Description</th>
-						<th>Cat</th>
-						<th>Shop</th>
-						<th style='width: 200px'>Img</th>
-						<th>Edit</th>
-						<th>Delete</th>
+						<th><input type="checkbox" id="checkall" /></th><th>Name</th><br>
+						<th><input type="checkbox" id="checkall" /><th>Weight</th>
+						<th><input type="checkbox" id="checkall" /><th>Unit</th>
+						<th><input type="checkbox" id="checkall" /><th>Price</th>
+						<th><input type="checkbox" id="checkall" /><th style='width: 100px'>Spec price</th>
+						<th><input type="checkbox" id="checkall" /><th>Active</th>
+						<th><input type="checkbox" id="checkall" /><th style='width: 200px'>Description</th>
+						<th><input type="checkbox" id="checkall" /><th>Cat</th>
+						<th><input type="checkbox" id="checkall" /><th>Shop</th>
+						<th><input type="checkbox" id="checkall" /><th style='width: 200px'>Img</th>
 					</thead>
 					<tbody>
 					<form class='' action="{{route('products.update', $data['id'])}}"  method='post'>

@@ -99,10 +99,11 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        $data = Product::find($id)->toArray();
+        $data['product'] = Product::find($id);
         // var_dump($data);
         // return;
-        return view('admin.products.edit', compact('data'));
+        
+        return view('admin.products.edit', $data);
     }
 
     /**
