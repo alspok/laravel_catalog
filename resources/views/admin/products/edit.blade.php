@@ -7,38 +7,27 @@
 
 <div class="container">
 	<div class="row">
-        <div class="col-md-12">
+        <div class="col-md-6">
         	<h4>Maistas - Edit</h4>
 			<div class="table-responsive">
 				<table id="mytable" class="table table-bordred table-striped">
-					<thead>
+					<!-- <thead>
 						<th><input type="checkbox" id="checkall" /></th><th>Name</th><br>
-						<th><input type="checkbox" id="checkall" /><th>Weight</th>
-						<th><input type="checkbox" id="checkall" /><th>Unit</th>
-						<th><input type="checkbox" id="checkall" /><th>Price</th>
-						<th><input type="checkbox" id="checkall" /><th style='width: 100px'>Spec price</th>
-						<th><input type="checkbox" id="checkall" /><th>Active</th>
-						<th><input type="checkbox" id="checkall" /><th style='width: 200px'>Description</th>
-						<th><input type="checkbox" id="checkall" /><th>Cat</th>
-						<th><input type="checkbox" id="checkall" /><th>Shop</th>
-						<th><input type="checkbox" id="checkall" /><th style='width: 200px'>Img</th>
-					</thead>
+						<th><input type="checkbox" id="checkall" /></th><th>Weight</th><br>
+						<th><input type="checkbox" id="checkall" /></th><th>Unit</th><br>
+						<th><input type="checkbox" id="checkall" /></th><th>Price</th><br>
+						<th><input type="checkbox" id="checkall" /></th><th style='width: 100px'>Spec price</th><br>
+						<th><input type="checkbox" id="checkall" /></th><th>Active</th><br>
+						<th><input type="checkbox" id="checkall" /></th><th style='width: 200px'>Description</th><br>
+						<th><input type="checkbox" id="checkall" /></th><th>Cat</th><br>
+						<th><input type="checkbox" id="checkall" /></th><th>Shop</th><br>
+						<th><input type="checkbox" id="checkall" /></th><th style='width: 200px'>Img</th><br>
+						<th><input type="checkbox" id="checkall" /></th><th>Edit</th><br>
+					</thead> -->
 					<tbody>
-					<form class='' action="{{route('products.update', $data['id'])}}"  method='post'>
-						{{ csrf_field() }}
-						{{$data['id']}} - {{$data['name']}}
-						@if($data['active'] == 1) <tr class='d-flex'>
-							@else <tr class='d-flex strike'>
-						@endif
-						<td><input type="checkbox" class="checkthis" /></td>
-						@foreach($data as $key => $value)
-								@if($key == 'id' || $key == 'slug' || $key == 'created_at' || $key == 'updated_at') @continue
-									@else  <td><input type='text' name='{{$key}}'style='border-style: hidden' value='{{$value}}' /></td>
-								@endif
-						@endforeach
-						<td><p data-placement="top" data-toggle="tooltip" title="Edit"><button type='submit' class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></td>
-						<td><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>
-					</form>
+					<tr><th>Name</th><th><input type='text' name='name' value='{{$product->name}}'/></th></tr>
+					<tr><th>Weight</th><th><input type='text' name='weight' value='{{$product->weight}}'/></th><tr>
+					<tr><th>Unit</th><th><input type='text' name='unit' value='{{$product->unit}}'/></th></tr>
 					</tbody>
 				</table>
 			</div>

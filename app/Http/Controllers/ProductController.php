@@ -99,11 +99,11 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        $data['product'] = Product::find($id);
+        $product = Product::find($id);
         // var_dump($data);
         // return;
         
-        return view('admin.products.edit', $data);
+        return view('admin.products.edit')->with('product', $product);
     }
 
     /**
