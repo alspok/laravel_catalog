@@ -146,10 +146,9 @@ class ProductController extends Controller
         // ]);
 
         $task = Product::find($id);
-        $task->description = $request['task-description'];
-        var_dump($task);
-        return;
-        $task->fill($task)->save();
+        $product = $request->all();
+        
+        $task->fill($product)->save();
         
         return redirect()->route('products.index')->with('success','Product updated successfully');
     }

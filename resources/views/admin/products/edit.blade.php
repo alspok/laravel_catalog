@@ -27,22 +27,19 @@
 					</thead>
 					<tbody>
 					<tr>
-						<form class=''action="{{ route('products.edit', $product->id)}}" method='post'>
+						<form class=''action="{{ route('products.update', $product->id)}}" method='post'>
 							@csrf
 							<!-- <th><input type="checkbox" id="checkall"/></th> -->
 							<td><input type='text' name='name' value='{{$product->name}}'/></td>
 							<td><input type='text' name='weight' value='{{$product->weight}}'/></td>
 							<td><input type='text' name='unit' value='{{$product->unit}}'/></td>
 							<td><input type='text' name='price' value='{{$product->price}}'/></td>
-							<td><input type='text' name='specprice' value='{{$product->special_price}}'/></td>
+							<td><input type='text' name='special_price' value='{{$product->special_price}}'/></td>
 							<td><input type='text' name='active' value='{{$product->active}}'/></td>
 							<td><input type='text' name='description' value='{{$product->description}}'/></td>
 							<td><input type='text' name='category' value='{{$product->category}}'/></td>
 							<td><input type='text' name='shop_id' value='{{$product->shop_id}}'/></td>
 							<td><input type='text' name='img' value='{{$product->img}}'/></td>
-						</form>
-						<form class='' action="{{ route('products.update', $product->id)}}" method='post'>
-							@csrf
 							<td><p data-placement="top" data-toggle="tooltip" title="Edit"><button type='submit' class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
 						</form>
 					</tr>
