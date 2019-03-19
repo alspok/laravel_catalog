@@ -147,7 +147,6 @@ class ProductController extends Controller
 
         $task = Product::find($id);
         $product = $request->all();
-        
         $task->fill($product)->save();
         
         return redirect()->route('products.index')->with('success','Product updated successfully');
