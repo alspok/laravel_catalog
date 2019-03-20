@@ -5,6 +5,11 @@ table{
 tr.strike{
 		text-decoration: line-through;
 	}
+
+tr.rowfont{
+	font-weight: 600;
+}
+
 th{
 		font-weight: bold;
 		background: lightgrey;
@@ -16,3 +21,4 @@ textarea{
 tfoot{
 	background: lightgray;
 }
+C:\Users\Alvydas\catalog\laravel\catalog\public\css\products.css

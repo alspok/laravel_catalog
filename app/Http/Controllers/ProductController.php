@@ -48,8 +48,6 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        var_dump($request);
-        
         $product = new Product();
         $product->name = $request->name;
         $product->slug = $request->slug;
@@ -62,9 +60,6 @@ class ProductController extends Controller
         $product->category = $request->category;
         $product->shop_id = $request->shop_id;
         $product->img = $request->img;
-
-        var_dump($product);
-        return;
 
         $product->save();
 

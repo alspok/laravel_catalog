@@ -31,7 +31,7 @@
 							@if($item->category == 1)
 								<form class='' action="{{ route('products.update', $item->id) }}" method='post'>
 								@csrf
-									@if($item->active == 1) <tr class='d-flex'>
+									@if($item->active == 1) <tr class='d-flex rowfont'>
 									@else <tr class='d-flex strike'>
 									@endif
 										<td><input type="checkbox" class="checkthis" /></td>
@@ -90,7 +90,7 @@
 							@if($item->category == 2)
 								<form class='' action="{{ route('products.update', $item->id) }}" method='post'>
 								@csrf
-									@if($item->active == 1) <tr class='d-flex'>
+									@if($item->active == 1) <tr class='d-flex rowfont'>
 									@else <tr class='d-flex strike'>
 									@endif
 										<td><input type="checkbox" class="checkthis" /></td>
