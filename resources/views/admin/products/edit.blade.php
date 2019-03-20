@@ -49,9 +49,9 @@
 								<td><p data-placement="top" data-toggle="tooltip" title="Edit"><button type='submit' class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
 							</form>
 						</tr>
-						@include('includes.footer')
 						</tbody>
 					</table>
+					@include('includes.footer')
 				</div>
 			</div>
 		</div>
