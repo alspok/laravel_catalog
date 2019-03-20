@@ -47,7 +47,7 @@ Route::get('admin/products/index', 'ProductController@index')->name('products.in
 // Route::get('admin/products/show/{id?}', 'ProductController@show');
 // Route::get('admin/products/update/{id}', 'ProductController@update')->name('products.update');
 // Route::put('admin/products/update', 'ProductController@update')->name('products.update');
-// Route::get('products/active/{id}/{act}', 'ProductController@active');
+Route::get('admin/products/active/{id}/{act}', 'ProductController@active')->name('product.active');
 // Route::get('products/showstatus/{act}', 'ProductController@showStatus');
 Route::post('admin/products/edit/{id}', 'ProductController@edit')->name('products.edit');
 Route::post('admin/products/update/{id}', 'ProductController@update')->name('products.update');

@@ -11,9 +11,7 @@
 		<script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
 
 	<div class="container">
-		<header class='row'>
-			@include('includes.header')
-		</header>
+		@include('includes.header')
 		<div class="row">
 			<div class="col-md-12">
 				<h4>Keisti</h4>
@@ -51,9 +49,7 @@
 								<td><p data-placement="top" data-toggle="tooltip" title="Edit"><button type='submit' class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
 							</form>
 						</tr>
-						<footer class='row'>
-							@include('includes.footer')
-						</footer>
+						@include('includes.footer')
 						</tbody>
 					</table>
 				</div>

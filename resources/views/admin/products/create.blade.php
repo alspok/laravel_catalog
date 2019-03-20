@@ -1,9 +1,9 @@
-@extends('layouts.app')
+<!-- @extends('layouts.app') -->
 
-@section('content')
+<!-- @section('content') -->
 <link rel='stylesheet' type='text/css' href="{{asset('css/products.css')}}">
 <form class='container' action="{{route('products.store')}}" method='post'>
-	@method('POST')
+	<!-- @method('POST') -->
 	@csrf
       <div class="row justify-content-center">
       	<div class="col-md-6">
@@ -34,7 +34,7 @@
       		<label class='col-form-label' for='image'>Image (str, null):</label>
       		<input type='text' name='img' class='form-control'>
             	<br>
-            	<button class='btn btn-dark'>Create</button>
+            	<button type='submit' class='btn btn-dark'>Create</button>
             </div>
       </div>
 </form>

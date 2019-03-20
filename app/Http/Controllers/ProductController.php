@@ -61,6 +61,9 @@ class ProductController extends Controller
         $product->shop_id = $request->shop_id;
         $product->img = $request->img;
 
+        var_dump($product);
+        return;
+
         $product->save();
 
         return redirect(route('products.index'));
