@@ -11,21 +11,21 @@
 |
 */
 
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('food');
 });
 
-// Auth::routes();
-
-// Route::get('/home', 'HomeController@index')->name('home');
-
-// Route::resource('/register', 'Auth\RegisterController');
-
-// Route::resource('/login', 'Auth\LoginController');
 
 Auth::routes();
 
-Route::get('/food', 'HomeController@index')->name('home.food');
+Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/food', 'HomeController@index')->name('home');
+Route::resource('register', 'Auth\RegisterController');
+Route::resource('login', 'Auth\LoginController');
 
 Route::resources([
 	// 'admin/products' => 'ProductController',
@@ -35,7 +35,6 @@ Route::resources([
 	'admin/reviews' => 'ReviewsController',
 	'admin/shops' => 'ShopsController',
 	'admin/permissions' => 'PermissionsController',
-	// 'admin/exel' => 'ExelController'
 ]);
 
 // Route::get('admin/products/store', 'ProductController@store');
@@ -52,3 +51,6 @@ Route::get('admin/products/active/{id}/{act}', 'ProductController@active')->name
 Route::post('admin/products/edit/{id}', 'ProductController@edit')->name('products.edit');
 Route::post('admin/products/update/{id}', 'ProductController@update')->name('products.update');
 Route::post('admin/products/softdelete/{id}', 'ProductController@softDelete')->name('products.softdelete');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
