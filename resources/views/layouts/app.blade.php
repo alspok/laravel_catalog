@@ -24,7 +24,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
-                <a class='navbar-brand'>Maistas</a>
+                <!-- <a class='navbar-brand'>Maistas</a> -->
                 <!-- <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                     {{ config('app.name', 'Maistas') }}
@@ -36,7 +36,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
+                        <a class='navbar-brand'>Maistas</a>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
