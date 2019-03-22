@@ -15,7 +15,7 @@
 //     return view('welcome');
 // });
 
-Route::get('/', function () {
+Route::get('/food', function () {
     return view('food');
 });
 

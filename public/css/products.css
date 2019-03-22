@@ -1,15 +1,16 @@
-table{
+table.main{
 		table-layout: fixed;
   		width: 100%;
 	}
 tr.strike{
 		text-decoration: line-through;
 	}
-
 tr.rowfont{
 	font-weight: 600;
 }
-
+tr.width{
+	width: 100%;
+}
 th{
 		font-weight: bold;
 		background: lightgrey;
@@ -17,6 +18,9 @@ th{
 textarea{
 		height: 104px;
 		width: 400px;
+}
+td.width{
+	width: 200px;
 }
 tfoot{
 	background: lightgray;
