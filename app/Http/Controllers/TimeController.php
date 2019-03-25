@@ -16,4 +16,10 @@ class TimeController extends Controller
 
         return view('layouts/time')->with('current', $dateTime->format('Y M d, H:i'));
     }
+
+    public function lastModification()
+    {
+        $modification = User::latest()->get(['created_at']);
+        var_dump($modification);
+    }
 }

@@ -11,7 +11,7 @@
             <li>Current time: {{$current}}</li>
         </div>
         <div class='col-md-4'>
-            <li>Last modification time: </li>
+            <li>Last modification time: {{$last}}</li>
         </div>
     </div>
 </div>
