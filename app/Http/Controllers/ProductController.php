@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Product;
+use DateTime;
+use DateTimeZone;
 
 class ProductController extends Controller
 {
@@ -14,7 +16,12 @@ class ProductController extends Controller
      */
     public function index()
     {
+        $dateTime = new DateTime;
+        $timeZone = new DateTimeZone('Europe/Vilnius');
+        $dateTime->setTimezone($timeZone);
+
         $data['products'] = Product::all();
+        $data['current'] = $dateTime->format('Y M d, H:i');
         return view('admin.products.table_view', $data);
     }
 
