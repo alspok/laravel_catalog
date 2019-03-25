@@ -1,8 +1,7 @@
+@include('layouts.app')
+
 <!doctype html>
 <html>
-	<head>
-		@include('includes.head')
-	</head>
 	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 		<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -11,25 +10,26 @@
 		<script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
 
 	<div class="container">
-		@include('includes.header')
 		<div class="row">
 			<div class="col-md-12">
 				<h4>Keisti</h4>
 				<div class="table-responsive">
 					<table id="mytable" class="table table-bordred table-striped">
 						<thead>
-							<!-- <th><input type="checkbox" id="checkall"/></th> -->
-							<th style='width:200px'>Name</th>
-							<th style='width:60px'>Weight</th>
-							<th>Unit</th>
-							<th style='width:60px'>Price</th>
-							<th style='width: 100px'>Spec price</th>
-							<th>Act</th>
-							<th style='width: 200px'>Description</th>
-							<th>Cat</th>
-							<th style='width: 100px'>Shop</th>
-							<th style='width: 200px'>Img</th>
-							<th>Keisti</th>
+							<tr>
+								<!-- <th><input type="checkbox" id="checkall"/></th> -->
+								<th class='col-md-1'>Produktas</th>
+								<th class='col-md-1'>Svoris</th>
+								<th class='col-md-1'>Vnt</th>
+								<th class='col-md-1'>Kaina</th>
+								<th class='col-md-1'>Spc kaina</th>
+								<th class='col-md-1'>Act</th>
+								<th class='col-md-1'>Pastabos</th>
+								<th class='col-md-1'>Kat</th>
+								<th class='col-md-1'>Pard</th>
+								<th class='col-md-1'>Vaizdas</th>
+								<th class='col-md-1'>Keisti</th>
+							</tr>
 						</thead>
 						<tbody>
 						<tr>
@@ -51,7 +51,6 @@
 						</tr>
 						</tbody>
 					</table>
-					@include('includes.footer')
 				</div>
 			</div>
 		</div>
