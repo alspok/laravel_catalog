@@ -8,10 +8,10 @@
 <div class='container'>
     <div class='row'>
         <div class='col-md-4'>
-            <li>Current time: {{$current}}</li>
+            <li>Dabar: {{$current}}</li>
         </div>
         <div class='col-md-4'>
-            <li>Last modification time: {{$last->updated_at}}</li>
+            <li>Paskutini kartą keista: {{$last->updated_at}}</li>
         </div>
     </div>
 </div>

@@ -24,7 +24,9 @@ class ProductController extends Controller
         $data['products'] = Product::all();
         
         $data['last'] = Product::latest('updated_at')->first();
-        $data['last']['updated_at']->setTimezone($timeZone)->format('Y M d, H:i');
+        // $data['last']->updated_at->format('Y');
+        var_dump($data['last']->updated_at->setTimezone($timeZone)->format('Y M d, H:i'));
+        return;
 
         return view('admin.products.table_view', $data);
     }
