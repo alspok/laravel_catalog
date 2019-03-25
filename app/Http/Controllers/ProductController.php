@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use App\Product;
 use DateTime;
 use DateTimeZone;
-use App\User;
 
 class ProductController extends Controller
 {
@@ -20,12 +19,12 @@ class ProductController extends Controller
         $dateTime = new DateTime;
         $timeZone = new DateTimeZone('Europe/Vilnius');
         $dateTime->setTimezone($timeZone);
+        $data['current'] = $dateTime->format('Y M d, H:i');
 
         $data['products'] = Product::all();
-        // var_dump($data['products']);
-        // return;
-        $data['current'] = $dateTime->format('Y M d, H:i');
-        $data['last'] = Product::latest('updated_at')->get();
+        
+        $data['last'] = Product::latest('updated_at')->first();
+        $data['last']['updated_at']->setTimezone($timeZone)->format('Y M d, H:i');
 
         return view('admin.products.table_view', $data);
     }
