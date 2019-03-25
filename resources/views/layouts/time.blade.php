@@ -8,7 +8,7 @@
 <div class='container'>
     <div class='row'>
         <div class='col-md-3'>
-            <li>Current time: </li>
+            <li>Current time: {{route('products.time')}}</li>
         </div>
         <div class='col-md-3'>
             <li>Last modification time: </li>
