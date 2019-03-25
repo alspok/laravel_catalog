@@ -10,7 +10,7 @@
 <div class="container">
 	<div class="row">
         <div class="col-md-12">
-        	<h5>Maistas</h5>
+        	<h4>Maistas</h4>
 			<div class="table-responsive">
 				<table id="mytable" class="table main table-bordred table-striped">
 					<thead>
@@ -71,7 +71,7 @@
 <div class="container">
 	<div class="row">
         <div class="col-md-12">
-        	<h5>Kita</h5>
+        	<h4>Kita</h4>
 			<div class="table-responsive">
 				<table id="mytable" class="table main table-bordred table-striped">
 					<thead>
