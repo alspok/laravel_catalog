@@ -11,7 +11,7 @@
             <li>Dabar: {{$current}}</li>
         </div>
         <div class='col-md-4'>
-            <li>Paskutini kartą keista: {{$last->updated_at}}</li>
+            <li>Paskutini kartą keista: {{$last->updated_at->format('Y M d, H:i')}}</li>
         </div>
     </div>
 </div>
