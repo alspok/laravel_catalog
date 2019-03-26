@@ -8,10 +8,10 @@
 <div class='container'>
     <div class='row'>
         <div class='col-md-6'>
-            <li class='size-color'>Dabar: {{$current}}</li>
+            <li>Dabar: {{$current}}</li>
         </div>
         <div class='col-md-6'>
-            <li class='size-color'>Paskutinį kartą keista: {{$last->updated_at->format('Y M d, H:i')}}</li>
+            <li>Paskutinį kartą keista: <span class='size-color'>{{$last->updated_at->format('Y M d, H:i')}}</span></li>
         </div>
     </div>
 </div>
