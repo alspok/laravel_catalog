@@ -25,3 +25,8 @@ td.width{
 tfoot{
 	background: lightgray;
 }
+
+.size-color{
+	font-size: 14px;
+	color: black;
+}

@@ -7,11 +7,11 @@
 
 <div class='container'>
     <div class='row'>
-        <div class='col-md-4'>
-            <li>Dabar: {{$current}}</li>
+        <div class='col-md-6'>
+            <li class='size-color'>Dabar: {{$current}}</li>
         </div>
-        <div class='col-md-4'>
-            <li>Paskutini kartą keista: {{$last->updated_at->format('Y M d, H:i')}}</li>
+        <div class='col-md-6'>
+            <li class='size-color'>Paskutinį kartą keista: {{$last->updated_at->format('Y M d, H:i')}}</li>
         </div>
     </div>
 </div>
