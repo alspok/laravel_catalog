@@ -16,13 +16,10 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $dateTime = new DateTime;
-        $timeZone = new DateTimeZone('Europe/Vilnius');
-        $dateTime->setTimezone($timeZone);
-        $data['current'] = $dateTime->format('Y M d, H:i');
-
         $data['products'] = Product::all();
-        
+
+        $dateTime = new DateTime;
+        $data['current'] = $dateTime->format('Y M d, H:i');
         $data['last'] = Product::latest('updated_at')->first();
 
         return view('admin.products.table_view', $data);
