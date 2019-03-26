@@ -15,15 +15,18 @@
 //     return view('welcome');
 // });
 
-Route::get('/food', function () {
-    return view('food');
+Route::get('/', function () {
+    return view('/food');
 });
 
+Route::get('/food', function(){
+	return view('/');
+});
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-// Route::get('/food', 'HomeController@index')->name('home');
+Route::get('/food', 'HomeController@index')->name('logout');
 Route::resource('register', 'Auth\RegisterController');
 Route::resource('login', 'Auth\LoginController');
 
@@ -42,7 +45,7 @@ Route::get('admin/products/create', 'ProductController@create')->name('products.
 Route::post('admin/products/store', 'ProductController@store')->name('products.store');
 Route::get('admin/products/index/{id}', 'ProductController@idIndex')->name('products.index.id');
 Route::get('admin/products/index', 'ProductController@index')->name('products.index');
-Route::get('', 'TimeController@time')->name('time');
+// Route::get('', 'TimeController@time')->name('time');
 // Route::get('admin/products/index', 'ProductController@index');
 // Route::get('admin/products/show/{id?}', 'ProductController@show');
 // Route::get('admin/products/update/{id}', 'ProductController@update')->name('products.update');
