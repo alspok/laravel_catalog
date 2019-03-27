@@ -15,6 +15,9 @@ class SupperAdminMiddleware
      */
     public function handle($request, Closure $next)
     {
+        if ($request->user() && $request->user()->type != ‘superadmin’){
+            return new Response(view(‘unauthorized’)->with(‘role’, ‘superadmin’));
+        }
         return $next($request);
     }
 }
