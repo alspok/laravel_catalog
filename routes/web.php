@@ -15,15 +15,18 @@
 //     return view('welcome');
 // });
 
-Route::group(['middleware' => 'App\Http\Middleware\AdminMiddleware'], function(){
-	Route::match(['get', 'post'], 'admin/products/create', 'ProductController@create');
-	Route::match(['get', 'post'], 'admin/products/store', 'ProductController@store');
-	Route::match(['get', 'post'], 'admin/products/index', 'ProductController@index');
-});
+// Route::group(['middleware' => 'App\Http\Middleware\AdminMiddleware'], function(){
+// 	Route::match(['get', 'post'], 'admin/products/create', 'ProductController@create');
+// 	Route::match(['get', 'post'], 'admin/products/store', 'ProductController@store');
+// 	Route::match(['get', 'post'], 'admin/products/index', 'ProductController@index');
+// });
 
-Route::group(['middleware' => 'App\Http\Middleware\GuestMiddleware'], function(){
-	Route::match(['get', 'post'], 'admin/products/index', 'ProductController@index');
-});
+Route::get('admin/products/creat', 'ProductController@create')->middleware('guest');
+
+// Route::group(['middleware' => 'App\Http\Middleware\GuestMiddleware'], function(){
+// 	// Route::match(['get', 'post'], 'admin/products/index', 'ProductController@index');
+// 	Route::get('admin/products/index', 'ProductController@index');
+// });
 
 
 Route::get('/', function () {

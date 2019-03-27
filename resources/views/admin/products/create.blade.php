@@ -1,9 +1,7 @@
-<!-- @extends('layouts.app') -->
+@include('layouts.app')
 
-<!-- @section('content') -->
 <link rel='stylesheet' type='text/css' href="{{asset('css/products.css')}}">
 <form class='container' action="{{route('products.store')}}" method='post'>
-	<!-- @method('POST') -->
 	@csrf
       <div class="row justify-content-center">
       	<div class="col-md-6">
@@ -38,4 +36,3 @@
             </div>
       </div>
 </form>
-@endsection

@@ -13,11 +13,12 @@ class GuestMiddleware
      * @param  \Closure  $next
      * @return mixed
      */
-    public function handle($request, Closure $next)
+    public function handle(Request $request, Closure $next)
     {
-        if($request->user() && $request->user()->type != 'guest'){
-            return new Response(view('unauthorized')->with('role', 'guest'));
+        if(!$request->guest == 'guest'){
+            return view('admin.products.unauthorized');
         }
+        dd($request);
         return $next($request);
     }
 }
