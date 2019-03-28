@@ -13,9 +13,10 @@ class GuestMiddleware
      * @param  \Closure  $next
      * @return mixed
      */
-    public function handle(Request $request, Closure $next)
+    public function handle($request, Closure $next)
     {
-        if(!$request->guest == 'guest'){
+        dd($request->user()->role);
+        if(!$request->user()->role == 'guest'){
             return view('admin.products.unauthorized');
         }
         dd($request);

@@ -15,8 +15,8 @@ class AdminMiddleware
      */
     public function handle($request, Closure $next)
     {
-        if($request->user() && $request->user()->type != 'admin'){
-            return new Response(view('unauthorized')->with('role', 'admin'));
+        if($request->user() && $request->user()->type != '1'){
+            return new Response(view('views.products.unauthorized')->with('role', 'admin'));
         }
         return $next($request);
     }

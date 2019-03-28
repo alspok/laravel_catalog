@@ -21,7 +21,7 @@
 // 	Route::match(['get', 'post'], 'admin/products/index', 'ProductController@index');
 // });
 
-Route::get('admin/products/creat', 'ProductController@create')->middleware('guest');
+Route::get('admin/products/creat', 'ProductController@create')->middleware('type', '1');
 
 // Route::group(['middleware' => 'App\Http\Middleware\GuestMiddleware'], function(){
 // 	// Route::match(['get', 'post'], 'admin/products/index', 'ProductController@index');
