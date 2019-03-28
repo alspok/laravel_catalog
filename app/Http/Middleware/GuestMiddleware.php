@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use Auth;
 
 class GuestMiddleware
 {
@@ -13,12 +14,12 @@ class GuestMiddleware
      * @param  \Closure  $next
      * @return mixed
      */
-    public function handle(Request $request, Closure $next)
+    public function handle($request, Closure $next)
     {
-        if(!$request->guest == 'guest'){
-            return view('admin.products.unauthorized');
+        var_dump(Auth::user()->role);
+        if(Auth::user() == 'guest'){
+            return view('admin.products.item_view');
         }
-        dd($request);
         return $next($request);
     }
 }
