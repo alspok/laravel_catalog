@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use Auth;
 
 class GuestMiddleware
 {
@@ -15,11 +16,11 @@ class GuestMiddleware
      */
     public function handle($request, Closure $next)
     {
-        dd($request->user()->role);
-        if(!$request->user()->role == 'guest'){
-            return view('admin.products.unauthorized');
+        var_dump(Auth::user('role'));
+        if(Auth::user('role') != 'admin'){
+            echo 'for admin only';
+            die();
         }
-        dd($request);
         return $next($request);
     }
 }

@@ -20,15 +20,10 @@
 // 	Route::match(['get', 'post'], 'admin/products/store', 'ProductController@store');
 // 	Route::match(['get', 'post'], 'admin/products/index', 'ProductController@index');
 // });
-
-Route::get('admin/products/creat', 'ProductController@create')->middleware('type', '1');
-
 // Route::group(['middleware' => 'App\Http\Middleware\GuestMiddleware'], function(){
 // 	// Route::match(['get', 'post'], 'admin/products/index', 'ProductController@index');
 // 	Route::get('admin/products/index', 'ProductController@index');
 // });
-
-
 Route::get('/', function () {
     return view('/food');
 });
@@ -53,11 +48,12 @@ Route::resources([
 	'admin/permissions' => 'PermissionsController',
 ]);
 
+// Route::get('admin/products/create', 'ProductController@create')->name('products.create');
 Route::get('admin/products/create', 'ProductController@create')->name('products.create');
 Route::post('admin/products/store', 'ProductController@store')->name('products.store');
 Route::get('admin/products/index/{id}', 'ProductController@idIndex')->name('products.index.id');
 Route::get('admin/products/index', 'ProductController@index')->name('products.index');
-Route::get('admin/products/active/{id}/{act}', 'ProductController@active')->name('product.active');
+Route::get('admin/products/active/{id}/{act}', 'ProductController@active')->name('products.active');
 Route::post('admin/products/edit/{id}', 'ProductController@edit')->name('products.edit');
 Route::post('admin/products/update/{id}', 'ProductController@update')->name('products.update');
 Route::post('admin/products/softdelete/{id}', 'ProductController@softDelete')->name('products.softdelete');
