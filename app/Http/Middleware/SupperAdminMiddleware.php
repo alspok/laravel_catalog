@@ -15,6 +15,7 @@ class SupperAdminMiddleware
      */
     public function handle($request, Closure $next)
     {
+        echo 'In SuperAdminMiddleware';
         if ($request->user() && $request->user()->type != ‘superadmin’){
             return new Response(view(‘unauthorized’)->with(‘role’, ‘superadmin’));
         }

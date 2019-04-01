@@ -16,10 +16,10 @@ class GuestMiddleware
      */
     public function handle($request, Closure $next)
     {
+        echo 'In GuestMiddleware';
         var_dump(Auth::user('role'));
         if(Auth::user('role') != 'admin'){
-            echo 'for admin only';
-            die();
+            return view('admin.products.unauthorized')->render();
         }
         return $next($request);
     }
