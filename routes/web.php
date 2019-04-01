@@ -42,7 +42,7 @@ Route::get('/food', function(){
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/food', 'HomeController@index')->name('logout');
 Route::resource('register', 'Auth\RegisterController');
-Route::resource('login', 'Auth\LoginController');
+// Route::resource('login', 'Auth\LoginController');
 
 Route::resources([
 	'admin/categories' => 'CategoriesController',
@@ -53,7 +53,7 @@ Route::resources([
 	'admin/permissions' => 'PermissionsController',
 ]);
 
-// Route::get('admin/products/create', 'ProductController@create')->name('products.create');
+Route::get('admin/products/create', 'ProductController@create')->name('products.create');
 Route::post('admin/products/store', 'ProductController@store')->name('products.store');
 Route::get('admin/products/index/{id}', 'ProductController@idIndex')->name('products.index.id');
 Route::get('admin/products/index', 'ProductController@index')->name('products.index');
