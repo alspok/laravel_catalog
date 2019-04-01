@@ -9,6 +9,12 @@ use DateTimeZone;
 
 class ProductController extends Controller
 {
+    // public function __construct()
+    // {
+    //     // $this->middleware('auth');
+    //     $this->middleware('admin');
+    // }
+
     /**
      * Display a listing of the resource.
      *
@@ -44,7 +50,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view('admin.products.create');
+       return view('admin.products.create');
     }
 
     /**

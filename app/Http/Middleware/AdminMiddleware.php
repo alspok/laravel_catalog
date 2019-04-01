@@ -18,7 +18,7 @@ class AdminMiddleware
         // var_dump($request->user());
         // if($request->user() && $request->user()->role == 'admin'){
         //     return view('admin.products.create');
-        if(Auth::user() && Auth::user()->role == 'admin'){
+        if($request->user() && $request->user()->role == 'admin'){
             return view('admin.products.create');
         }
         // }

@@ -16,7 +16,7 @@
 				<div class="table-responsive">
 					<table id="mytable" class="table table-bordred table-striped">
 						<thead>
-							<tr>
+							<tr class='row'>
 								<!-- <th><input type="checkbox" id="checkall"/></th> -->
 								<th class='col-md-1'>Produktas</th>
 								<th class='col-md-1'>Svoris</th>
@@ -32,11 +32,11 @@
 							</tr>
 						</thead>
 						<tbody>
-						<tr>
 							<form class=''action="{{ route('products.update', $product->id)}}" method='post'>
 								@csrf
 								<!-- <th><input type="checkbox" id="checkall"/></th> -->
-								<td><input type='text' name='name' value='{{$product->name}}'/></td>
+							<tr class='row'>
+								<td><input type='text' name='name' width='100px' value='{{$product->name}}'/></td>
 								<td><input type='text' name='weight' value='{{$product->weight}}'/></td>
 								<td><input type='text' name='unit' value='{{$product->unit}}'/></td>
 								<td><input type='text' name='price' value='{{$product->price}}'/></td>
@@ -47,8 +47,8 @@
 								<td><input type='text' name='shop_id' value='{{$product->shop_id}}'/></td>
 								<td><input type='text' name='img' value='{{$product->img}}'/></td>
 								<td><p data-placement="top" data-toggle="tooltip" title="Edit"><button type='submit' class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
+							</tr>
 							</form>
-						</tr>
 						</tbody>
 					</table>
 				</div>
