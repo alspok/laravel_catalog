@@ -3,7 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
-use Auth;
+use Illuminate\Support\Facades\Auth;
 
 class GuestMiddleware
 {
@@ -21,6 +21,6 @@ class GuestMiddleware
         if(Auth::user('role') != 'admin'){
             return view('admin.products.unauthorized')->render();
         }
-        return $next($request);
+        return view('admin.products.create');
     }
 }

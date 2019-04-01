@@ -19,6 +19,7 @@ class AdminMiddleware
         if($request->user() && $request->user()->role != 'admin'){
             return view('admin.products.unauthorized');
         }
+        // }
         return $next($request);
     }
 }

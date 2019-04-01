@@ -37,7 +37,7 @@ Route::get('/food', function(){
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/food', 'HomeController@index')->name('logout');
 Route::resource('register', 'Auth\RegisterController');
-Route::resource('login', 'Auth\LoginController');
+// Route::resource('login', 'Auth\LoginController');
 
 Route::resources([
 	'admin/categories' => 'CategoriesController',
