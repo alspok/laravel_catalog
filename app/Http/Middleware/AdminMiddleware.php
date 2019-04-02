@@ -16,18 +16,14 @@ class AdminMiddleware
      */
     public function handle($request, Closure $next)
     {
-        // var_dump($request->user());
-        // if($request->user() && $request->user()->role == 'admin'){
-        //     return view('admin.products.create');
-        if(Auth::check() && (Auth::user()->role == 'admin')){
+        // var_dump($request);
+        if($request->requestUri == '/admin/products/create' && Auth::check() && Auth::user()->role == 'admin'){
 
             return response()->view('admin/products/create');
         }
         else{
             return redirect('/home');
         }
-        // }
         // return $next($request);
-        
     }
 }
