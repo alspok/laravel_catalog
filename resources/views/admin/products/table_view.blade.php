@@ -140,9 +140,14 @@
 			<h4>Pastabos/Komentarai</h4>
 		</div>
 		<div class="col-md-6">
-			<h4>Textarea</h4>
+			<form class='' action='' method='post'>
+				<textarea name="comment" form="usrform" cols='60' rows='4'></textarea>
+			</form>
 		</div>
-		<div class="col-md-3" >
+		<div class="col-md-1">
+			<input type='submit' name="usrform" />
+		</div>
+		<div class="col-md-2" >
 			<form class='' action='' method='post'>
 				<a href="{{ route('products.create') }}"><h4><b>Įvesti produktą</b></h4></a>
 			</form>
