@@ -3,17 +3,20 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Auth;
 use App\Product;
 use DateTime;
 use DateTimeZone;
 
 class ProductController extends Controller
 {
-    // public function __construct()
-    // {
-    //     // $this->middleware('auth');
-    //     $this->middleware('admin');
-    // }
+    protected $user;
+
+    public function __construct()
+    {
+        // $this->middleware('auth');
+        // var_dump($this->middleware('auth'));
+    }
 
     /**
      * Display a listing of the resource.
@@ -50,7 +53,10 @@ class ProductController extends Controller
      */
     public function create()
     {
-       return view('admin.products.create');
+        // if(Auth::user()->check && ($this->user == 'admin')){
+            return view('admin.products.create');
+        // }
+        // else return view('resources.views.dashboard');
     }
 
     /**

@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use Auth;
 
 class AdminMiddleware
 {
@@ -18,10 +19,15 @@ class AdminMiddleware
         // var_dump($request->user());
         // if($request->user() && $request->user()->role == 'admin'){
         //     return view('admin.products.create');
-        if($request->user() && $request->user()->role == 'admin'){
-            return view('admin.products.create');
+        if(Auth::check() && (Auth::user()->role == 'admin')){
+
+            return response()->view('admin/products/create');
+        }
+        else{
+            return redirect('/home');
         }
         // }
-        return $next($request);
+        // return $next($request);
+        
     }
 }
