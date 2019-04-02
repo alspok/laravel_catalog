@@ -8,9 +8,6 @@ tr.strike{
 tr.rowfont{
 	font-weight: 600;
 }
-tr.width{
-	width: 100%;
-}
 th{
 		font-weight: bold;
 		background: lightgrey;
@@ -19,9 +16,6 @@ textarea{
 		height: 104px;
 		width: 400px;
 }
-td.width{
-	width: 200px;
-}
 tfoot{
 	background: lightgray;
 }
@@ -29,4 +23,7 @@ tfoot{
 .size-color{
 	font-size: 14px;
 	color: red;
+}
+.row{
+	width: 200;
 }

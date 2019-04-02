@@ -9,64 +9,66 @@
 <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
 
 <div class="container">
-	<div class="row">
+	<!-- <div class="row"> -->
         <div class="col-md-12">
         	<h4>Maistas</h4>
-			<div class="table-responsive">
-				<table id="mytable" class="table main table-bordred table-striped">
-					<thead>
-						<tr class='row'>
-							<th class='col-md-1'><input type="checkbox" id="checkall"></th>
-							<th class='col-md-1'>Produktas</th>
-							<th class='col-md-1'>Svoris</th>
-							<th class='col-md-1'>Vnt</th>
-							<th class='col-md-1'>Kaina</th>
-							<th class='col-md-1'>Spc kaina</th>
-							<!-- <th>Active</th> -->
-							<th class="col-md-1">Pastabos</th>
-							<th class='col-md-1'>Kat</th>
-							<th class='col-md-1'>Pard</th>
-							<th class='col-md-1'>Vaizdas</th>
-							<th class='col-md-1'>Keisti</th>
-							<th class='col-md-1'>Trinti</th>
-						</tr>
-					</thead>
-					<tbody>
-						@foreach($products as $item)
-							@if($item->category == 1)
-								<form class='' action="{{ route('products.update', $item->id) }}" method='post'>
-								@csrf
-									@if($item->active == 1) <tr class='d-flex rowfont'>
-										@else <tr class='d-flex strike'>
-									@endif
-										<td class='col-md-1'><input type="checkbox" class="checkthis"></td>
-										<td class='col-md-1'>{{$item->name}}</td>
-										<td class='col-md-1'>{{$item->weight}}</td>
-										<td class='col-md-1'>{{$item->unit}}</td>
-										<td class='col-md-1'>{{$item->price}}</td>
-										<td class='col-md-1'>{{$item->special_price}}</td>
-										<!-- <td>{{$item->active}}</td> -->
-										<td class='col-md-1'>{{$item->description}}</td>
-										<td class='col-md-1'>{{$item->category}}</td>
-										<td class='col-md-1'>{{$item->shop_id}}</td>
-										<td class='col-md-1'><a href='{{$item->img}}'>Img</a></td>
-								</form>
-								<form class='' action="{{ route('products.edit', $item->id)}}" method='post'>
+				<div class="table-responsive">
+					<table id="mytable" class="table main table-bordred table-striped">
+						<thead>
+							<tr>
+								<th class='col-md-1'><input type="checkbox" id="checkall"></th>
+								<th class='col-md-1'>Produktas</th>
+								<th class='col-md-1'>Svoris</th>
+								<th class='col-md-1'>Vnt</th>
+								<th class='col-md-1'>Kaina</th>
+								<th class='col-md-1'>Spc kaina</th>
+								<!-- <th>Active</th> -->
+								<th class="col-md-1">Pastabos</th>
+								<th class='col-md-1'>Kat</th>
+								<th class='col-md-1'>Pard</th>
+								<th class='col-md-1'>Vaizdas</th>
+								<th class='col-md-1'>Keisti</th>
+								<th class='col-md-1'>Trinti</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+							@foreach($products as $item)
+								@if($item->category == 1)
+									<form class='' action="{{ route('products.update', $item->id) }}" method='post'>
 									@csrf
-									<td class='col-md-1'><p data-placement="top" data-toggle="tooltip" title="Edit"><button type='submit' class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
-								</form>
-								<form class='' action="{{ route('products.softdelete', $item->id)}}" method='post'>
-									@csrf
-									<td class='col-md-1'><p data-placement="top" data-toggle="tooltip" title="Delete"><button type='submit' class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>
-								</form>
-								</tr>
-							@endif
-						@endforeach
-					</tbody>
-				</table>
+										@if($item->active == 1) <tr class='d-flex rowfont'>
+											@else <tr class='d-flex strike'>
+										@endif
+											<td class='col-md-1'><input type="checkbox" class="checkthis"></td>
+											<td class='col-md-1'>{{$item->name}}</td>
+											<td class='col-md-1'>{{$item->weight}}</td>
+											<td class='col-md-1'>{{$item->unit}}</td>
+											<td class='col-md-1'>{{$item->price}}</td>
+											<td class='col-md-1'>{{$item->special_price}}</td>
+											<!-- <td>{{$item->active}}</td> -->
+											<td class='col-md-1'>{{$item->description}}</td>
+											<td class='col-md-1'>{{$item->category}}</td>
+											<td class='col-md-1'>{{$item->shop_id}}</td>
+											<td class='col-md-1'><a href='{{$item->img}}'>Img</a></td>
+									</form>
+									<form class='' action="{{ route('products.edit', $item->id)}}" method='post'>
+										@csrf
+										<td class='col-md-1'><p data-placement="top" data-toggle="tooltip" title="Edit"><button type='submit' class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
+									</form>
+									<form class='' action="{{ route('products.softdelete', $item->id)}}" method='post'>
+										@csrf
+										<td class='col-md-1'><p data-placement="top" data-toggle="tooltip" title="Delete"><button type='submit' class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>
+									</form>
+								@endif
+							@endforeach
+							</tr>
+						</tbody>
+					</table>
+				</div>
 			</div>
 		</div>
-	</div>
+	<!-- </div> -->
 </div>
 
 <div class="container">
