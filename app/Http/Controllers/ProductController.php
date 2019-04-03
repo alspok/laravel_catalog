@@ -25,14 +25,38 @@ class ProductController extends Controller
      */
     public function index()
     {
+        // $data['products'] = Product::all();
+
+        // $dateTime = new DateTime;
+        // $data['current'] = $dateTime->format('Y M d, H:i');
+        // $data['last'] = Product::latest('updated_at')->first();
+
+        // return view('admin.products.table_view', $data);
+        return redirect('/home');
+    }
+
+    public function admin_index()
+    {
         $data['products'] = Product::all();
 
         $dateTime = new DateTime;
         $data['current'] = $dateTime->format('Y M d, H:i');
         $data['last'] = Product::latest('updated_at')->first();
 
-        return view('admin.products.table_view', $data);
+        return view('admin.products.table_view_admin', $data);
     }
+
+    public function guest_index()
+    {
+        $data['products'] = Product::all();
+
+        $dateTime = new DateTime;
+        $data['current'] = $dateTime->format('Y M d, H:i');
+        $data['last'] = Product::latest('updated_at')->first();
+
+        return view('admin.products.table_view_guest', $data);
+    }
+
 
     /**
      * Display a item by id of the resource.
@@ -54,7 +78,7 @@ class ProductController extends Controller
     public function create()
     {
         // if(Auth::user()->check && ($this->user == 'admin')){
-            return view('admin.products.create');
+        // return view('admin.products.create');
         // }
         // else return view('resources.views.dashboard');
     }
