@@ -71,7 +71,7 @@
 	</div>
 </div>
 
-<div class="container">
+<div class="container" style='border: solid black 0.5px'>
 	<div class="row">
         <div class="col-md-12">
         	<h4>Kita</h4>
@@ -134,7 +134,7 @@
 	</div>
 </div>
 
-<div class="container">
+<div class="container"style='border: solid black 0.5px'>
 	<div class="row">
         <div class="col-md-3">
 			<h4>Pastabos/Komentarai</h4>
