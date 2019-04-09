@@ -26,6 +26,7 @@
 //     return view('resources/views/food');
 // });
 Route::view('/', 'food');
+Route::view('/food', 'food');
 Route::view('admin/layouts', 'food');
 Route::view('/logout', 'food');
 Route::view('/layouts', 'food');
