@@ -16,10 +16,10 @@ class LogController extends Controller
     public function createLogZip()
     {
         $zip = new ZipArchive();
-        $zipFileName = 'storage/logs/laravel-log.zip';
+        $zipFileName = 'C:/Users/Alvydas/catalog/laravel/catalog/storage/logs/laravel-log.zip';
 
         if ($zip->open($zipFileName, ZipArchive::CREATE) === TRUE){
-            $zip->addFile('/storage/logs/laravel-2019-03-18.log');
+            $zip->addFile('C:/Users/Alvydas/catalog/laravel/catalog/storage/logs/laravel-2019-03-18.log');
             $zip->close();
         }
         else echo 'Error creating zip file';
