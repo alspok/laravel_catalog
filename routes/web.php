@@ -31,6 +31,9 @@ Route::view('admin/layouts', 'food');
 Route::view('/logout', 'food');
 Route::view('/layouts', 'food');
 
+// Email related routes
+
+Route::get('mail/send', 'MailController@send');
 
 // Route::get('/', function(){
 // 	return view('admin/products/admin_index');
