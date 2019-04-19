@@ -31,6 +31,9 @@ class Kernel extends ConsoleKernel
         $command_two = "compress-archive *.* laravel-log.zip -force";
         $schedule->exec($command_one . " ; " . $command_two)->everyMinute();
         // $schedule->exec(cd "C:\users\alvydas\catalog\laravel\catalog\storage\logs" && compress-archive "*.* laravel-log.zip -force")->everyMinute();
+
+        $schedule->exec('echo "schedule working"')->everyMinute()->appendOutputTo('/storage/logs/laravel.log');
+        
     }
 
     /**
