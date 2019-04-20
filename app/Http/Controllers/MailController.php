@@ -15,6 +15,6 @@ class MailController extends Controller
         $sendObject->sender = 'admin';
         $sendObject->receiver = 'alspok';
 
-        Mail::to('alspok@gmail.com')->send(new FoodEmail($sendObject));
+        Mail::to('1f87c95528-668645@inbox.mailtrap.io')->send(new FoodEmail($sendObject));
     }
 }
