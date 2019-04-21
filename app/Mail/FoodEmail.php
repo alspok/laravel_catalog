@@ -30,7 +30,7 @@ class FoodEmail extends Mailable
     public function build()
     {
         return $this->from('alspok@gmail.com')
-                    ->view('mail.food_mail_html');
-                    // ->text('mail.food_mail_plain');
+                    ->view('mail.food_mail_html')
+                    ->text('mail.food_mail_plain');
     }
 }
