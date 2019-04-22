@@ -19,7 +19,7 @@ class MailController extends Controller
         $sendObject->sender = 'Admin';
         $sendObject->receiver = $user->name;
         $sendObject->tableView = DB::table('products')->get();
-        $sendObject->currentTime = date('Y-m-d H:i');
+        $sendObject->currentTime = date('Y-m-d   H:i');
         
         Mail::to($user->email)->send(new FoodEmail($sendObject));
     }

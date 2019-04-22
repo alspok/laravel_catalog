@@ -1,5 +1,5 @@
 Labas, <i>{{ $foodMail->receiver }}</i>,
-<p>Užsakymas {{$foodMail->currentTime}}</p>
+<p>Išsiųsta {{$foodMail->currentTime}}</p>
 <p>Maistas</p>
     @foreach($foodMail->tableView as $item)
         @if($item->shop_id == 1 && $item->category == 1)
