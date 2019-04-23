@@ -1,17 +1,19 @@
-Labas, <i>{{ $foodMail->receiver }}</i>,
+<html>
+Labas, <i><b>{{ $foodMail->receiver }}</b></i>,
 <p>Išsiųsta {{$foodMail->currentTime}}</p>
-<p>Maistas</p>
+<p><b>Maista</b>s</p>
     @foreach($foodMail->tableView as $item)
-        @if($item->shop_id == 1 && $item->category == 1)
+        @if($item->shop_id == 1 && $item->active == 1)
             {{$item->name}}    {{$item->weight}}    {{$item->unit}}<br>
         @endif
     @endforeach
-<p>Kita</p>
+<p><b>Kita</b></p>
     @foreach($foodMail->tableView as $item)
-        @if($item->shop_id == 2 && $item->category == 2)
+        @if($item->shop_id == 2 && $item->active == 1)
         {{$item->name}}    {{$item->weight}}    {{$item->unit}}<br>
         @endif
     @endforeach
 <br>
 Dėkui.<br>
 <i>{{ $foodMail->sender }}</i>
+</html>

@@ -20,7 +20,7 @@
 // 	// Route::match(['get', 'post'], 'admin/products/index', 'ProductController@index');
 // 	Route::get('admin/products/index', 'ProductController@index');
 // });
-// Auth::routes();
+Auth::routes();
 
 // Route::get('/', function () {
 //     return view('resources/views/food');
@@ -28,7 +28,7 @@
 Route::view('/', 'food');
 Route::view('/food', 'food');
 Route::view('admin/layouts', 'food');
-Route::view('/logout', 'food');
+Route::view('/logout', 'login');
 Route::view('/layouts', 'food');
 
 // Email related routes
@@ -63,7 +63,6 @@ Route::get('admin/products/active/{id}/{act}', 'ProductController@active')->name
 Route::post('admin/products/edit/{id}', 'ProductController@edit')->name('products.edit');
 Route::post('admin/products/update/{id}', 'ProductController@update')->name('products.update');
 Route::post('admin/products/softdelete/{id}', 'ProductController@softDelete')->name('products.softdelete');
-
 
 Auth::routes();
 
