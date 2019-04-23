@@ -4,13 +4,13 @@ Labas, <i><b>{{ $foodMail->receiver }}</b></i>,
 <p><b>Maista</b>s</p>
     @foreach($foodMail->tableView as $item)
         @if($item->shop_id == 1 && $item->active == 1)
-            {{$item->name}}    {{$item->weight}}    {{$item->unit}}<br>
+            {{$item->name}}    {{$item->weight}} {{$item->unit}}     {{$item->price}} <br>
         @endif
     @endforeach
 <p><b>Kita</b></p>
     @foreach($foodMail->tableView as $item)
         @if($item->shop_id == 2 && $item->active == 1)
-        {{$item->name}}    {{$item->weight}}    {{$item->unit}}<br>
+        {{$item->name}}    {{$item->weight}} {{$item->unit}}     {{$item->price}}<br>
         @endif
     @endforeach
 <br>
