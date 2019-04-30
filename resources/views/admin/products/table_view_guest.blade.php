@@ -8,7 +8,8 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
 
-<div class="container-fluid" style='border: solid black 0.5px max-width:1170px'>
+<div class="container" style='border: solid black 0.5px'>
+<!-- <div class="container-fluid" style='border: solid black 0.5px max-width:1170px'> -->
 	<div class="row">
         <div class="col-md-12">
         	<h4>Maistas</h4>
@@ -32,7 +33,7 @@
 							</tr>
 						</thead>
 						<tbody>
-							<tr class='row' style='width: 100%'>
+							<tr class='row'>
 								@foreach($products as $item)
 									@if($item->category == 1)
 										<form class='' action="{{ route('products.update', $item->id) }}" method='post'>
