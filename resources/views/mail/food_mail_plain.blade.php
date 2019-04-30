@@ -14,7 +14,7 @@ Kita
 
 @foreach($foodMail->tableView as $item)
 @if($item->shop_id == 2 && $item->active == 1)
-{{$item->name}}   {{$item->weight}} {{$item->unit}}    {{$item->price}}
+{{$item->name}}   {{$item->weight}}   {{$item->unit}}    {{$item->price}}
 @endif
 @endforeach
 
