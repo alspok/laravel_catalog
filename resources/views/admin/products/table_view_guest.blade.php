@@ -138,17 +138,16 @@
 	<div class="row">
         <div class="col-md-6" style='border: solid black 0.5px'>
 			<h4>Pastabos/Komentarai</h4>
-			<div class="col-md-6">
+			<button type='submit'></button>
+			<form class='' action='' method='post'>
+				<textarea name="comment" form="usrform" cols='60' rows='4'></textarea>
+			</form>
+		</div>
+		<div class="col-md-6">
 				<form class='' action='' method='post'>
 					<button type='submit'>Send</button>
 				</form>
 			</div>
-			<form class='' action='' method='post'>
-				<textarea name="comment" form="usrform" cols='60' rows='4'></textarea>
-				<input type='submit' name="usrform" />
-			</form>
-		</div>
-		
 		<!-- <div class="col-md-4">
 			<form class='' action='' method='post'>
 				<textarea name="comment" form="usrform" cols='60' rows='4'></textarea>
