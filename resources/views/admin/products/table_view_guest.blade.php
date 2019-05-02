@@ -146,10 +146,11 @@
 			</form>
 		</div>
 		<div class="mt-3 col-md-6">
-				<form class='' action="{{route('mail.send')}}"" method='post'>
-					<button type='submit'>Send</button>
-				</form>
-			</div>
+			Siųsti sąrašą el. paštu.
+			<form class='' action="{{route('mail.send')}}"" method='post'>
+				<button type='submit'>Send</button>
+			</form>
+		</div>
 		<!-- <div class="col-md-4">
 			<form class='' action='' method='post'>
 				<textarea name="comment" form="usrform" cols='60' rows='4'></textarea>
