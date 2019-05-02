@@ -146,7 +146,7 @@
 			</form>
 		</div>
 		<div class="col-md-6">
-				<form class='' action='' method='post'>
+				<form class='' action="{{route(mail.send)}}"" method='post'>
 					<button type='submit'>Send</button>
 				</form>
 			</div>
