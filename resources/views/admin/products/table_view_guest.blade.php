@@ -136,7 +136,7 @@
 
 <div class="container" style='border: solid black 0.5px'>
 	<div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6" style='border: solid black 0.5px'>
 			<h4>Pastabos/Komentarai</h4>
 			<form class='' action='' method='post'>
 				<textarea name="comment" form="usrform" cols='60' rows='4'></textarea>
