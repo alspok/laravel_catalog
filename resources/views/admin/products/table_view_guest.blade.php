@@ -72,7 +72,7 @@
 	</div>
 </div>
 
-<div class="container" style='border: solid black 0.5px'>
+<div class="container">
 	<div class="row">
         <div class="col-md-12">
         	<h4>Kita</h4>
@@ -134,9 +134,9 @@
 	</div>
 </div>
 
-<div class="container" style='border: solid black 0.5px'>
+<div class="container">
 	<div class="row">
-        <div class="mt-3 col-md-6" style='border: solid black 0.5px'>
+        <div class="mt-3 col-md-6">
 			<div>
 				Pastabos/Komentarai</h4>
 				<button type='submit'>Submit</button>
