@@ -22,5 +22,7 @@ class MailController extends Controller
         $sendObject->currentTime = date('Y-m-d   H:i');
         
         Mail::to($user->email)->send(new FoodEmail($sendObject));
+
+        return redirect()->route('products.index')->with('success', 'Mail sent successfully');
     }
 }
