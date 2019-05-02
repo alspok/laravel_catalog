@@ -142,7 +142,7 @@
 				<button type='submit'>Submit</button>
 			</div>
 			<form class='' action='' method='post'>
-				<textarea name="comment" form="usrform" cols='60' rows='2'></textarea>
+				<textarea name="comment" form="usrform" cols='60' rows='3'></textarea>
 			</form>
 		</div>
 		<div class="col-md-6">
