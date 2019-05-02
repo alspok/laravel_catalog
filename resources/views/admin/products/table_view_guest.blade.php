@@ -138,11 +138,14 @@
 	<div class="row">
         <div class="col-md-3">
 			<h4>Pastabos/Komentarai</h4>
-		</div>
-		<div class="col-md-6">
 			<form class='' action='' method='post'>
 				<textarea name="comment" form="usrform" cols='60' rows='4'></textarea>
 			</form>
+		</div>
+		<div class="col-md-6">
+			<!-- <form class='' action='' method='post'>
+				<textarea name="comment" form="usrform" cols='60' rows='4'></textarea>
+			</form> -->
 		</div>
 		<div class="col-md-1">
 			<input type='submit' name="usrform" />
