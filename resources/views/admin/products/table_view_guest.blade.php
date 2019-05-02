@@ -138,7 +138,7 @@
 	<div class="row">
         <div class="col-md-6" style='border: solid black 0.5px'>
 			<h4>Pastabos/Komentarai</h4>
-			<button type='submit'></button>
+			<button type='submit'>Submit</button>
 			<form class='' action='' method='post'>
 				<textarea name="comment" form="usrform" cols='60' rows='4'></textarea>
 			</form>
