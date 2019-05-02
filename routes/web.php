@@ -18,6 +18,7 @@ Route::view('/food', 'food');
 Route::view('admin/layouts', 'food');
 Route::view('/logout', 'login');
 Route::view('/layouts', 'food');
+Route::view('mail/send', 'login');
 
 Route::resource('register', 'Auth\RegisterController');
 
@@ -43,6 +44,5 @@ Route::post('admin/products/softdelete/{id}', 'ProductController@softDelete')->n
 
 Route::get('mail/send', 'MailController@send');
 Route::post('mail/send', 'MailController@send')->name('mail.send');
-Route::view('mail/send', 'login');
 
 Route::get('/home', 'HomeController@index')->name('home');
