@@ -145,7 +145,7 @@
 				<textarea name="comment" form="usrform" cols='60' rows='3'></textarea>
 			</form>
 		</div>
-		<div class="col-md-6">
+		<div class="mt-3 col-md-6">
 				<form class='' action="{{route('mail.send')}}"" method='post'>
 					<button type='submit'>Send</button>
 				</form>
