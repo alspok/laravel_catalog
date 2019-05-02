@@ -24,6 +24,6 @@ class MailController extends Controller
         Mail::to($user->email)->send(new FoodEmail($sendObject));
 
         // return redirect()->route('products.index')->with('success', 'Mail sent successfully');
-        return redirect()->route('resources.views.dashboard')->with('success', 'Mail sent successfully');
+        return redirect()->route('resources\views\dashboard')->with('success', 'Mail sent successfully');
     }
 }
