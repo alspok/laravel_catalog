@@ -20,7 +20,8 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-<body style="position: fixed>
+<div style="position: fixed>
+<body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
@@ -79,4 +80,5 @@
         </main>
     </div>
 </body>
+</div>
 </html>
