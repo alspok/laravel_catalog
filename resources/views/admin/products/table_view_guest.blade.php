@@ -136,7 +136,7 @@
 
 <div class="container" style='border: solid black 0.5px'>
 	<div class="row">
-        <div class="col-md-6" style='border: solid black 0.5px'>
+        <div class="mt-2 col-md-6" style='border: solid black 0.5px'>
 			<div>
 				Pastabos/Komentarai</h4>
 				<button type='submit'>Submit</button>
