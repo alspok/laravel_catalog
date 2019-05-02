@@ -21,6 +21,7 @@ Route::view('/food', 'food');
 Route::view('admin/layouts', 'food');
 Route::view('/logout', 'login');
 Route::view('/layouts', 'food');
+Route::view('mail/send', 'login');
 
 // Email related routes
 
