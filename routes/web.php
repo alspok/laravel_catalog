@@ -13,28 +13,13 @@
 
 Auth::routes();
 
-// Route::get('/', function () {
-//     return view('resources/views/food');
-// });
 Route::view('/', 'food');
 Route::view('/food', 'food');
 Route::view('admin/layouts', 'food');
 Route::view('/logout', 'login');
 Route::view('/layouts', 'food');
-Route::view('mail/send', 'login');
 
-// Email related routes
-
-
-
-// Route::get('/', function(){
-// 	return view('admin/products/admin_index');
-// });
-
-// Route::get('/home', 'HomeController@index')->name('home');
-// Route::get('/food', 'HomeController@index')->name('logout');
 Route::resource('register', 'Auth\RegisterController');
-// Route::resource('login', 'Auth\LoginController');
 
 Route::resources([
 	'admin/categories' => 'CategoriesController',
@@ -58,7 +43,6 @@ Route::post('admin/products/softdelete/{id}', 'ProductController@softDelete')->n
 
 Route::get('mail/send', 'MailController@send');
 Route::post('mail/send', 'MailController@send')->name('mail.send');
-
-// Auth::routes();
+Route::view('mail/send', 'login');
 
 Route::get('/home', 'HomeController@index')->name('home');
