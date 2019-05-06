@@ -1327,6 +1327,7 @@
         },
         {
             "name": "nesbot/carbon",
+<<<<<<< HEAD
             "version": "1.37.0",
             "source": {
                 "type": "git",
@@ -1337,6 +1338,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/f8a29bb3b0cf1f4dc94ba1deaeccd8084b206ce8",
                 "reference": "f8a29bb3b0cf1f4dc94ba1deaeccd8084b206ce8",
+=======
+            "version": "1.37.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/briannesbitt/Carbon.git",
+                "reference": "5be4fdf97076a685b23efdedfc2b73ad0c5eab70"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/5be4fdf97076a685b23efdedfc2b73ad0c5eab70",
+                "reference": "5be4fdf97076a685b23efdedfc2b73ad0c5eab70",
+>>>>>>> 5b004fb47e8fbd3bbd6a102c0a93b9495379f69d
                 "shasum": ""
             },
             "require": {
@@ -1383,7 +1396,11 @@
                 "datetime",
                 "time"
             ],
+<<<<<<< HEAD
             "time": "2019-05-03T07:53:30+00:00"
+=======
+            "time": "2019-04-19T10:27:42+00:00"
+>>>>>>> 5b004fb47e8fbd3bbd6a102c0a93b9495379f69d
         },
         {
             "name": "nexmo/client",

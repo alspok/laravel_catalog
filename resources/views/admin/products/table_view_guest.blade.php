@@ -136,32 +136,27 @@
 <div class="container">
 	<div class="row">
         <div class="mt-3 col-md-6">
-			<div>
-				Pastabos/Komentarai</h4>
-				<button type='submit'>Submit</button>
-			</div>
-			<form class='' action='' method='post'>
-				<textarea name="comment" form="usrform" cols='60' rows='3'></textarea>
+			<!-- <div>
+				<form class='' action="{{ route('posts.store')}}" method='post'>
+				<h4>Pastabos/Komentarai</h4>
+				@csrf	
+					<button type='submit'>Siųsti</button>
+				</form>
+			</div> -->
+			<form class='' action="{{ route('posts.store')}}" method='post'>
+			@csrf
+				<h4>Pastabos/Komentarai</h4>
+				<textarea name="content" form="usrform" cols='60' rows='3'></textarea>
+				<input type='submit' value='Submit' />
+				<button type='submit'>Siųsti</button>
 			</form>
 		</div>
 		<div class="mt-3 col-md-6">
-			Siųsti sąrašą el. paštu.
-			<form class='' action="{{route('mail.send')}}"" method='post'>
-				<button type='submit'>Send</button>
+			<form class='' action="{{ route('mail.send') }}"" method='post'>
+			<h4>Siųsti sąrašą el. paštu</h4>
+			@csrf
+				<button type='submit'>Siųsti</button>
 			</form>
 		</div>
-		<!-- <div class="col-md-4">
-			<form class='' action='' method='post'>
-				<textarea name="comment" form="usrform" cols='60' rows='4'></textarea>
-			</form>
-		</div>
-		<div class="col-md-1">
-			<input type='submit' name="usrform" />
-		</div> -->
-		<!-- <div class="col-md-2" >
-			<form class='' action='' method='post'>
-				<a href="{{ route('products.create') }}"><h4><b>Įvesti produktą</b></h4></a>
-			</form>
-		</div> -->
 	</div>
 </div>

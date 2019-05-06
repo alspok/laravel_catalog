@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Posts;
+use Auth;
+
 class PostsController extends Controller
 {
     /**
@@ -35,6 +37,11 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
+        var_dump(Auth::user()->id);
+        var_dump(Auth::user()->name);
+        var_dump(Auth::user()->email);
+        var_dump($request->content);
+        die();
         $post= new Posts();
         $post->name = $request->name;
         $post->title = $request->title;

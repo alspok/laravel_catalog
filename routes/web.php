@@ -19,7 +19,7 @@ Route::view('admin/layouts', 'food');
 Route::view('/logout', 'login');
 Route::view('/layouts', 'food');
 
-Route::resource('register', 'Auth\RegisterController');
+// Route::resource('register', 'Auth\RegisterController');
 
 Route::resources([
 	'admin/categories' => 'CategoriesController',
@@ -41,7 +41,9 @@ Route::post('admin/products/edit/{id}', 'ProductController@edit')->name('product
 Route::post('admin/products/update/{id}', 'ProductController@update')->name('products.update');
 Route::post('admin/products/softdelete/{id}', 'ProductController@softDelete')->name('products.softdelete');
 
-// Route::get('mail/send', 'MailController@send');
+Route::post('admin/posts/store', 'PostsController@store')->name('posts.store');
+
+Route::get('mail/send', 'MailController@send')->name('send');
 Route::post('mail/send', 'MailController@send')->name('mail.send');
 
 Route::get('/home', 'HomeController@index')->name('home');
