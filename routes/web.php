@@ -41,6 +41,8 @@ Route::post('admin/products/edit/{id}', 'ProductController@edit')->name('product
 Route::post('admin/products/update/{id}', 'ProductController@update')->name('products.update');
 Route::post('admin/products/softdelete/{id}', 'ProductController@softDelete')->name('products.softdelete');
 
+Route::post('admin/posts/store', 'PostsController@store')->name('posts.store');
+
 Route::get('mail/send', 'MailController@send')->name('send');
 Route::post('mail/send', 'MailController@send')->name('mail.send');
 

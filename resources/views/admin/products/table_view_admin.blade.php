@@ -8,10 +8,16 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
 
-<div class="container" style='border: solid black 0.5px'>
+<div class="container">
 	<div class="row">
         <div class="col-md-12">
-        	<h4>Maistas</h4>
+			<div class="col-md-2" >
+				<h4>Maistas</h4>
+				<form class='' action='' method='post'>
+					@csrf
+					<a href="{{ route('products.create') }}"><h4><b>Įvesti produktą</b></h4></a>
+				</form>
+			</div>
 				<div class="table-responsive">
 					<table id="mytable" class="table main table-bordred table-striped">
 						<thead>
@@ -71,11 +77,17 @@
 	</div>
 </div>
 
-<div class="container" style='border: solid black 0.5px'>
+<div class="container">
 	<div class="row">
         <div class="col-md-12">
-        	<h4>Kita</h4>
 			<div class="table-responsive">
+			<div class="col-md-2" >
+				<h4>Kita</h4>
+				<form class='' action='' method='post'>
+					@csrf
+					<a href="{{ route('products.create') }}"><h4><b>Įvesti produktą</b></h4></a>
+				</form>
+			</div>
 				<table id="mytable" class="table main table-bordred table-striped">
 					<thead>
 						<tr class='row'>
@@ -130,29 +142,6 @@
 					</tbody>
 				</table>
 			</div>
-		</div>
-	</div>
-</div>
-
-<div class="container"style='border: solid black 0.5px'>
-	<div class="row">
-        <div class="col-md-3">
-			<h4>Pastabos/Komentarai</h4>
-		</div>
-		<div class="col-md-6">
-			<form class='' action='' method='post'>
-			@csrf
-				<textarea name="comment" form="usrform" cols='60' rows='4'></textarea>
-			</form>
-		</div>
-		<div class="col-md-1">
-			<input type='submit' name="usrform" />
-		</div>
-		<div class="col-md-2" >
-			<form class='' action='' method='post'>
-			@csrf
-				<a href="{{ route('products.create') }}"><h4><b>Įvesti produktą</b></h4></a>
-			</form>
 		</div>
 	</div>
 </div>
