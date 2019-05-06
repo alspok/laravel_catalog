@@ -147,6 +147,7 @@
 			@csrf
 				<h4>Pastabos/Komentarai</h4>
 				<textarea name="content" form="usrform" cols='60' rows='3'></textarea>
+				<input type='submit' value='Submit' />
 				<button type='submit'>Siųsti</button>
 			</form>
 		</div>
