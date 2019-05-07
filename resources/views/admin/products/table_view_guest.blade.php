@@ -143,7 +143,7 @@
 					<button type='submit'>Siųsti</button>
 				</form>
 			</div> -->
-			<form class='' action="{{ route('posts.send')}}" method='post'>
+			<form class='' action="{{ route('posts.multiple') }}" method='post'>
 			@csrf
 				<h4>Pastabos/Komentarai</h4>
 				<button type='submit'>Siųsti</button>
@@ -152,7 +152,8 @@
 			</form>
 		</div>
 		<div class="mt-3 col-md-6">
-			<form class='' action="{{ route('mail.send') }}"" method='post'>
+			<!-- <form class='' action="{{ route('posts.store'), route('mail.send') }}" method='post'> -->
+			<form class='' action="{{ route('mail.send') }}" method='post'>
 			<h4>Siųsti sąrašą el. paštu</h4>
 			@csrf
 				<button type='submit'>Siųsti</button>

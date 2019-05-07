@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Mail\FoodEmail;
+use App\Mail\PostsEmail;
 use Illuminate\Support\Facades\Mail;
 use DB;
 use Auth;
@@ -33,6 +34,7 @@ class MailController extends Controller
 
         $sendObject = new \stdClass;
         $sendObject->sender = $user->name;
+        $sendObject->senderEmail = $user->email;
         $sendObject->receiver = 'Admin';
         $sendObject->tableView = $request->content;
         $sendObject->currentTime = date('Y-m-d   H:i');
