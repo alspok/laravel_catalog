@@ -25,4 +25,20 @@ class MailController extends Controller
 
         return redirect()->route('products.index')->with('success', 'Mail sent successfully');
     }
+
+    public function sendPosts(Request $request)
+    {
+        $user = Auth::user();
+        $admin = DB::select("SELECT email FROM users WHERE name='admin'");
+
+        $sendObject = new \stdClass;
+        $sendObject->sender = $user->name;
+        $sendObject->receiver = 'Admin';
+        $sendObject->tableView = $request->content;
+        $sendObject->currentTime = date('Y-m-d   H:i');
+
+        Mail::to($admin)->send(new PostsEmail($sendObject));
+
+        return redirect()->route('products.index');
+    }
 }

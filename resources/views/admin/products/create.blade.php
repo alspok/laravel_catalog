@@ -23,7 +23,7 @@
                   <input type='text' name='unit' class='form-control' value='vnt'/>
       		<label class='col-form-label'>Description (str, null):</label>
                   <br>
-      		<textarea name='description'>somthing something</textarea>
+      		<textarea name='description'>something something</textarea>
                   <br>
                   <label class='col-form-label' for='product_id'>Category (int):</label>
                   <input type='text' name='category' class='form-control' value='2'/>

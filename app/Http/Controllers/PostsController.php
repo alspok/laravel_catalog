@@ -37,21 +37,16 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-        var_dump(Auth::user()->id);
-        var_dump(Auth::user()->name);
-        var_dump(Auth::user()->email);
-        var_dump($request->content);
-        die();
         $post= new Posts();
-        $post->name = $request->name;
-        $post->title = $request->title;
+        $post->name = Auth::user()->name;
+        $post->title = 'Some title';
         $post->content = $request->content;
-        $post->user_id = $request->user_id;
-        $post->active = $request->active;
-        $post->img = $request->img;
+        $post->user_id = 0;
+        $post->active = Auth::user()->type;
+        $post->img = 'Some img';
 
         $post->save();
-        return redirect(route('posts.index'));
+        return redirect(route('products.guest_index'));
     }
 
     /**

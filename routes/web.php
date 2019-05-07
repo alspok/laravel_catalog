@@ -43,6 +43,7 @@ Route::post('admin/products/softdelete/{id}', 'ProductController@softDelete')->n
 
 Route::post('admin/posts/store', 'PostsController@store')->name('posts.store');
 
+Route::post('mail/send/posts', 'MailController@sendPosts')->name('posts.send');
 Route::get('mail/send', 'MailController@send')->name('send');
 Route::post('mail/send', 'MailController@send')->name('mail.send');
 

@@ -143,12 +143,12 @@
 					<button type='submit'>Siųsti</button>
 				</form>
 			</div> -->
-			<form class='' action="{{ route('posts.store')}}" method='post'>
+			<form class='' action="{{ route('posts.send')}}" method='post'>
 			@csrf
 				<h4>Pastabos/Komentarai</h4>
-				<textarea name="content" form="usrform" cols='60' rows='3'></textarea>
-				<input type='submit' value='Submit' />
 				<button type='submit'>Siųsti</button>
+				<br><br>
+				<textarea name="content" cols='60' rows='3' placeholder='type here...'></textarea>
 			</form>
 		</div>
 		<div class="mt-3 col-md-6">
