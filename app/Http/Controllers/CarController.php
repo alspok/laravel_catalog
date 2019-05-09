@@ -44,6 +44,6 @@ class CarController extends Controller
         $car = $request->all();
         $task->fill($car)->save();
         
-        return redirect()->route('products.index')->with('success','Product updated successfully');
+        return redirect()->route('cars.index');
     }
 }
