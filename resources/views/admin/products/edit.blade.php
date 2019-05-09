@@ -1,53 +1,68 @@
 @include('layouts.app')
 
-<!doctype html>
-<html>
-	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-		<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-		<link rel="stylesheet" type="text/css" href="{{ asset('css/products.css') }}" >
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-		<script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
 
-	<div class="container">
-		<div class="col-mg-6">
-			<h4>Keisti</h4>
-				<div class="table-responsive">
-					<table id="mytable" class="table table-bordred table-striped">
-						<thead>
-							<!-- <th><input type="checkbox" id="checkall"/></th> -->
-							<th class='col-md-1'>Produktas</th>
-							<th class='col-md-1'>Svoris</th>
-							<th class='col-md-1'>Vnt</th>
-							<th class='col-md-1'>Kaina</th>
-							<th class='col-md-1'>Spc kaina</th>
-							<th class='col-md-1'>Act</th>
-							<th class='col-md-1'>Pastabos</th>
-							<th class='col-md-1'>Kat</th>
-							<th class='col-md-1'>Pard</th>
-							<th class='col-md-1'>Vaizdas</th>
-							<th class='col-md-1'>Keisti</th>
-						</thead>
-						<tbody>
-							<form class=''action="{{ route('products.update', $product->id)}}" method='post'>
-								@csrf
-								<!-- <th><input type="checkbox" id="checkall"/></th> -->
-								<td><input type='text' name='name' width='100px' value='{{$product->name}}'/></td>
-								<td><input type='text' name='weight' value='{{$product->weight}}'/></td>
-								<td><input type='text' name='unit' value='{{$product->unit}}'/></td>
-								<td><input type='text' name='price' value='{{$product->price}}'/></td>
-								<td><input type='text' name='special_price' value='{{$product->special_price}}'/></td>
-								<td><input type='text' name='active' value='{{$product->active}}'/></td>
-								<td><input type='text' name='description' value='{{$product->description}}'/></td>
-								<td><input type='text' name='category' value='{{$product->category}}'/></td>
-								<td><input type='text' name='shop_id' value='{{$product->shop_id}}'/></td>
-								<td><input type='text' name='img' value='{{$product->img}}'/></td>
-								<td><p data-placement="top" data-toggle="tooltip" title="Edit"><button type='submit' class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
-							</form>
-						</tbody>
-					</table>
-				</div>
-			</div>
-		</div>
+<div class="container">
+	<div class="row">
+        <form class=''action="{{ route('products.update', $product->id)}}" method='post'>
+        @csrf
+            <div class="form-group col-xs-10 col-sm-4 col-md-4 col-lg-4">
+                <label for="exampleInputEmail1">Produktas</label>
+                <input type='text' name='name' width='100px' value='{{$product->name}}'/>
+            </div>
+            <div class="form-group col-xs-10 col-sm-4 col-md-4 col-lg-4">
+                <label for="exampleInputEmail1">Svoris</label>
+                <input type='text' name='weight' value='{{$product->weight}}'/>
+            </div>
+            <div class="clearfix"></div>
+            
+            <div class="form-group col-xs-10 col-sm-4 col-md-4 col-lg-4">
+                <label for="exampleInputPassword1">Vienetas</label>
+                <input type='text' name='unit' value='{{$product->unit}}'/>
+            </div>
+            <div class="form-group col-xs-10 col-sm-4 col-md-4 col-lg-4">
+                <label for="exampleInputPassword1">Kaina</label>
+                <input type='text' name='price' value='{{$product->price}}'/>
+            </div>
+            <div class="clearfix"></div>
+            
+            <div class="form-group col-xs-10 col-sm-10 col-md-4 col-lg-4">
+                <label for="exampleInputFile">Spec. kaina</label>
+                <input type='text' name='special_price' value='{{$product->special_price}}'/>
+            </div>
+            <div class="form-group col-xs-10 col-sm-10 col-md-4 col-lg-4">
+                <label for="exampleInputFile">Pastabos</label>
+                <input type='text' name='description' value='{{$product->description}}'/>
+            </div>
+            <div class="clearfix"></div>
+
+            <div class="form-group col-xs-10 col-sm-10 col-md-4 col-lg-4">
+                <label for="exampleInputFile">Kat</label>
+                <input type='text' name='category' value='{{$product->category}}'/>
+            </div>
+            <div class="form-group col-xs-10 col-sm-10 col-md-4 col-lg-4">
+                <label for="exampleInputFile">Act</label>
+                <input type='text' name='active' value='{{$product->active}}'/>
+            </div>
+            <div class="clearfix"></div>
+
+            <div class="form-group col-xs-10 col-sm-10 col-md-4 col-lg-4">
+                <label for="exampleInputFile">Parduotuvė</label>
+                <input type='text' name='shop_id' value='{{$product->shop_id}}'/>
+            </div>
+            <div class="col-xs-10 col-sm-4 col-md-4 col-lg-4">
+                <label for="exampleInputFile">Vaizdas</label>
+                <input type='text' name='img' value='{{$product->img}}'/>
+            </div>
+            <div class="clearfix"></div>
+
+            <div class="form-group col-xs-10 col-sm-10 col-md-4 col-lg-4">
+            <button type="submit" class="btn btn-primary center-block">Keisti</button>
+            </div>
+            <div class="clearfix"></div>
+        </form>
 	</div>
-</html>
+</div>
