@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-6">
-            <form class='' action="{{route('products.update', $id)  method='post'>
+            <form class='' action="{{route('products.update', $id)}}">
             	@method('POST')
             	@csrf
             	<div class="col-md-6">

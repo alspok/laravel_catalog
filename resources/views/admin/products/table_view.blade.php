@@ -141,6 +141,7 @@
 		</div>
 		<div class="col-md-6">
 			<form class='' action='' method='post'>
+			@csrf
 				<textarea name="comment" form="usrform" cols='60' rows='4'></textarea>
 			</form>
 		</div>
@@ -149,6 +150,7 @@
 		</div>
 		<div class="col-md-2" >
 			<form class='' action='' method='post'>
+			@csrf
 				<a href="{{ route('products.create') }}"><h4><b>Įvesti produktą</b></h4></a>
 			</form>
 		</div>
