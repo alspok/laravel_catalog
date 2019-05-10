@@ -13,8 +13,7 @@
 			<form class=''action="{{ route('cars.upstore', $car->id )}}" method='post'>
             @csrf
 				<div class='col-mg-6 form-group'>
-					<h4>Id</h4>
-					<input type='text' name='id' width='100px' value="{{ $car->id }}" /><br><br>
+                    <?php echo 'Id: ' . (string)$car->id; ?>
 					<h4>Modelis</h4>
 					<input type='text' name='model' width='100px' value="{{ $car->model }}" /><br><br>
 					<h4>Slug</h4>

@@ -14,7 +14,7 @@
                 <input type='text' name='name' width='100px' />
             </div>
             <div class="form-group col-xs-10 col-sm-4 col-md-4 col-lg-4">
-                <label for="exampleInputEmail1">Svoris</label>
+                <label for="exampleInputEmail1">Svoris/Tūris</label>
                 <input type='text' name='weight' />
             </div>
             <div class="clearfix"></div>

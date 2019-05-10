@@ -51,23 +51,9 @@ class CarController extends Controller
     {
         $task = Car::find($id);
         $data = $request->all();
-        $token = array_shift($data);
-        var_dump($data);
-        die();
-        // $data = [
-        //     // 'id' => $request->id,
-        //     'model' => $request->model,
-        //     // 'slug' => $request->slug,
-        //     // 'year' => $request->year,
-        //     // 'price' => $request->price,
-        //     // 'special_price' => $request->special_price,
-        //     // 'img' => $request->img
-        // ];
+        array_shift($data);
 
-        $task->fill($data)->save();
-        // var_dump($data);
-        // die();
-        // DB::table('cars')->where('id', $id)->update($data);
+        DB::table('cars')->where('id', $id)->update($data);
 
         return redirect(route('cars.index'));
     }

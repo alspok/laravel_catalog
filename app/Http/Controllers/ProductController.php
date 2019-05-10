@@ -39,9 +39,9 @@ class ProductController extends Controller
     {
         $data['products'] = Product::all();
 
-        $dateTime = new DateTime;
-        $data['current'] = $dateTime->format('Y M d, H:i');
-        $data['last'] = Product::latest('updated_at')->first();
+        // $dateTime = new DateTime;
+        // $data['current'] = $dateTime->format('Y M d, H:i');
+        // $data['last'] = Product::latest('updated_at')->first();
 
         return view('admin.products.table_view_admin', $data);
     }
