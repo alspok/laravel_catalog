@@ -8,7 +8,7 @@ use DB;
 
 class CarController extends Controller
 {
-    protected $data = ['model', 'slug'];
+    protected $data;
 
     public function __construct()
     {
@@ -50,16 +50,19 @@ class CarController extends Controller
     public function up_store(Request $request, $id)
     {
         $task = Car::find($id);
-        // $data = $request->all();
-        $data = [
-            // 'id' => $request->id,
-            'model' => $request->model,
-            // 'slug' => $request->slug,
-            // 'year' => $request->year,
-            // 'price' => $request->price,
-            // 'special_price' => $request->special_price,
-            // 'img' => $request->img
-        ];
+        $data = $request->all();
+        $token = array_shift($data);
+        var_dump($data);
+        die();
+        // $data = [
+        //     // 'id' => $request->id,
+        //     'model' => $request->model,
+        //     // 'slug' => $request->slug,
+        //     // 'year' => $request->year,
+        //     // 'price' => $request->price,
+        //     // 'special_price' => $request->special_price,
+        //     // 'img' => $request->img
+        // ];
 
         $task->fill($data)->save();
         // var_dump($data);
