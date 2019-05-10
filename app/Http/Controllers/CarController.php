@@ -8,7 +8,7 @@ use DB;
 
 class CarController extends Controller
 {
-    protected $user;
+    protected $data = ['model', 'slug'];
 
     public function __construct()
     {
@@ -40,12 +40,33 @@ class CarController extends Controller
 
     public function update(Request $request)
     {   
-
-        $task = Find::find($id);
-        $car = $request->all();
-        $task->fill($car)->save();
+        $id = $request->id;
+        $car = Car::find($id);
+        return view('admin/cars/cars_update')->with('car', $car);
         
-        return redirect()->route('cars.index');
+        // return redirect()->route('cars.index');
+    }
+
+    public function up_store(Request $request, $id)
+    {
+        $task = Car::find($id);
+        // $data = $request->all();
+        $data = [
+            // 'id' => $request->id,
+            'model' => $request->model,
+            // 'slug' => $request->slug,
+            // 'year' => $request->year,
+            // 'price' => $request->price,
+            // 'special_price' => $request->special_price,
+            // 'img' => $request->img
+        ];
+
+        $task->fill($data)->save();
+        // var_dump($data);
+        // die();
+        // DB::table('cars')->where('id', $id)->update($data);
+
+        return redirect(route('cars.index'));
     }
 
     public function delete(Request $request)

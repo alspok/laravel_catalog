@@ -54,5 +54,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::view('/cars', 'admin/cars/cars')->name('cars');
 Route::post('cars/store', 'CarController@store')->name('cars.store');
 Route::post('cars/update', 'CarController@update')->name('cars.update');
+Route::post('cars/upstore/{id}', 'CarController@up_store')->name('cars.upstore');
 Route::post('cars/delete', 'CarController@delete')->name('cars.delete');
 Route::get('cars/show_table', 'CarController@index')->name('cars.index');

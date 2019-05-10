@@ -23,7 +23,7 @@
             <form class='' action="{{ route('cars.update') }}" method='post'>
             @csrf
                 <label>Car Id:</label>
-                <input type='text' name='car-up-id' />
+                <input type='text' name='id' />
                 <input type='submit' value='Update' />
             </form>
             <form class='' action="{{ route('cars')}}" method='get'>

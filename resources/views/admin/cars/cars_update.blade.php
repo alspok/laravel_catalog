@@ -10,21 +10,23 @@
 	<div class="container">
 	<h3>Pakeisti automobilį</h3>
 		<div row>
-			<form class=''action="{{ route('cars.store' )}}" method='post'>
+			<form class=''action="{{ route('cars.upstore', $car->id )}}" method='post'>
             @csrf
 				<div class='col-mg-6 form-group'>
+					<h4>Id</h4>
+					<input type='text' name='id' width='100px' value="{{ $car->id }}" /><br><br>
 					<h4>Modelis</h4>
-					<input type='text' name='model' width='100px'  value='VW' /><br><br>
+					<input type='text' name='model' width='100px' value="{{ $car->model }}" /><br><br>
 					<h4>Slug</h4>
-					<input type='text' name='slug' value='vw' /><br><br>
+					<input type='text' name='slug' value="{{ $car->slug }}" /><br><br>
                     <h4>Metai</h4>
-					<input type='text' name='year' value='1998' /><br><br>
+					<input type='text' name='year' value="{{ $car->year }}" /><br><br>
 					<h4>Kaina</h4>
-					<input type='text' name='price' value='1000'/><br><br>
+					<input type='text' name='price' value="{{ $car->price }}" /><br><br>
 					<h4>Spec. kaina</h4>
-					<input type='text' name='special_price' value='800''/><br><br>
+					<input type='text' name='special_price' value="{{ $car->special_price }}" /><br><br>
 					<h4>Vaizdas</h4>
-                    <input type='text' name='img' value='img''/><br><br>
+                    <input type='text' name='img' value="{{ $car->imga }}" /><br><br>
                     <input type='submit' />
                 </div>
 			</form>
