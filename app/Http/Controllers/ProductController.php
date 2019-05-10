@@ -77,10 +77,10 @@ class ProductController extends Controller
      */
     public function create()
     {
-        // if(Auth::user()->check && ($this->user == 'admin')){
-        // return view('admin.products.create');
-        // }
-        // else return view('resources.views.dashboard');
+        if(Auth::user()->check && ($this->user == 'admin')){
+        return view('admin.products.create');
+        }
+        else return view('resources.views.dashboard');
     }
 
     /**

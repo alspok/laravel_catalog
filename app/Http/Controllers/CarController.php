@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Car;
+use DB;
 
 class CarController extends Controller
 {
@@ -34,10 +35,10 @@ class CarController extends Controller
 
         $car->save();
 
-        return redirect(route('cars'));
+        return redirect(route('cars.index'));
     }
 
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {   
 
         $task = Find::find($id);
@@ -46,4 +47,13 @@ class CarController extends Controller
         
         return redirect()->route('cars.index');
     }
+
+    public function delete(Request $request)
+    {
+        $id = $request->id;
+        DB::table('cars')->delete($id);
+
+        return redirect()->route('cars.index');
+    }
+
 }

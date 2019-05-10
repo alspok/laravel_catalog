@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fa82f77640091bd6818f8bc0c79403a7",
+    "content-hash": "411888edc07a98fe4780e19c71876a04",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -2204,6 +2204,52 @@
                 "uuid"
             ],
             "time": "2018-07-19T23:38:55+00:00"
+        },
+        {
+            "name": "sayeed/custom-migrate",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nilpahar/custom-migration.git",
+                "reference": "731a99164dbd726d8c855ee3c823a3d3e14935b5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nilpahar/custom-migration/zipball/731a99164dbd726d8c855ee3c823a3d3e14935b5",
+                "reference": "731a99164dbd726d8c855ee3c823a3d3e14935b5",
+                "shasum": ""
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Sayeed\\CustomMigrate\\CustomMigrateServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Sayeed\\CustomMigrate\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Hasan",
+                    "email": "jbhasan@gmail.com"
+                }
+            ],
+            "description": "Custom migrate in laravel. You can individual file migrate here",
+            "keywords": [
+                "database",
+                "migrate",
+                "migration",
+                "specific"
+            ],
+            "time": "2018-11-13T13:53:14+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
